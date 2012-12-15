@@ -1,0 +1,16 @@
+.deps
+Makefile
+Makefile.in
+bigram
+code
+config.h.in
+frcode
+locate
+updatedb
+*~
+bigram.o
+code.o
+frcode.o
+locate.o
+word_io.o
+dblocation.texi
