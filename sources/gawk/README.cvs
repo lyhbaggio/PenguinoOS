@@ -1,0 +1,22 @@
+Fri Feb  4 10:26:09 IST 2011
+============================
+
+If you are reading this, you are looking in the wrong file. Gawk is
+no longer maintained in CVS. It is maintained in Git from savannah.gnu.org.
+
+According to the Savannah website, you can use:
+
+	cvs -d:pserver:anonymous@pserver.git.sv.gnu.org:/gawk.git \
+		co -d gawk master
+
+to get the development version. This works.
+
+However, as far as I can see, there is no way to get to any of the other
+branches in the Git repository via CVS.
+
+Please move directly to Git if you can.
+
+Thanks,
+
+Arnold Robbins
+Gawk Maintainer
