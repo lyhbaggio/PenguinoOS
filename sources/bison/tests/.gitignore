@@ -1,0 +1,13 @@
+/*.dot
+/*.output
+/atconfig
+/atlocal
+/autom4te.cache
+/bison
+/calc
+/calc.[chy]
+/calc.tab.*
+/package.m4
+/testsuite
+/testsuite.dir
+/testsuite.log
