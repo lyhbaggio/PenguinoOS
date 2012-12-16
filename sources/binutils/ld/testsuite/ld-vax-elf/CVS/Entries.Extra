@@ -1,0 +1,9 @@
+/plt-local-hidden-pic.s////*////
+/plt-local-lib.dd////*////
+/plt-local-lib.ld////*////
+/plt-local-lib.s////*////
+/plt-local-rehidden-pic.s////*////
+/plt-local.dd////*////
+/plt-local.ld////*////
+/plt-local.s////*////
+/vax-elf.exp////*////

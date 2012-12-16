@@ -1,0 +1,17 @@
+/all.exp////*////
+/entry_align.s////*////
+/entry_misalign.s////*////
+/entry_misalign2.s////*////
+/err-pcrel.s////*////
+/j_too_far.s////*////
+/jlong.d////*////
+/jlong.s////*////
+/loop_align.s////*////
+/loop_misalign.s////*////
+/pcrel.d////*////
+/pcrel.s////*////
+/short_branch_offset.d////*////
+/short_branch_offset.s////*////
+/weak-call.d////*////
+/weak-call.s////*////
+/xtensa-err.exp////*////

@@ -1,0 +1,9 @@
+/elf-offset.ld////*////
+/main.c////*////
+/sh1.c////*////
+/sh2.c////*////
+/shared.dat////*////
+/shared.exp////*////
+/sun4.dat////*////
+/symbolic.dat////*////
+/xcoff.dat////*////

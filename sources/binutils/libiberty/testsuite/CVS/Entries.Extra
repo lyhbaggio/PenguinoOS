@@ -1,0 +1,5 @@
+/Makefile.in////*////
+/demangle-expected////*////
+/test-demangle.c////*////
+/test-expandargv.c////*////
+/test-pexecute.c////*////

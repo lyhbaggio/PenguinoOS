@@ -1,0 +1,13 @@
+/abi-xgate-16-32.d////*////
+/abi-xgate-16-64.d////*////
+/abi-xgate-32-32.d////*////
+/abi-xgate-32-64.d////*////
+/abi.s////*////
+/all_insns.d////*////
+/all_insns.s////*////
+/hilo.d////*////
+/hilo.s////*////
+/insns-dwarf2.d////*////
+/insns.d////*////
+/insns.s////*////
+/xgate.exp////*////

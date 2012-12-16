@@ -1,0 +1,14 @@
+/addr-syntax.d////*////
+/addr-syntax.s////*////
+/allinsn.d////*////
+/allinsn.exp////*////
+/allinsn.s////*////
+/badpostmod.s////*////
+/badrelax.d////*////
+/badrelax.s////*////
+/branch_lit.d////*////
+/branch_lit.s////*////
+/regression.d////*////
+/regression.s////*////
+/sample.d////*////
+/sample.s////*////

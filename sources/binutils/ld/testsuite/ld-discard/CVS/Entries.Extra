@@ -1,0 +1,13 @@
+/discard.exp////*////
+/discard.ld////*////
+/exit.s////*////
+/extern.d////*////
+/extern.s////*////
+/start.d////*////
+/start.s////*////
+/static.d////*////
+/static.s////*////
+/zero-range.d////*////
+/zero-range.s////*////
+/zero-rel.d////*////
+/zero-rel.s////*////
