@@ -1,0 +1,29 @@
+# Files brought in by gnulib-tool:
+/arg-nonnull.h
+/c++defs.h
+/config.libpath
+/config.rpath
+/csharpcomp.sh.in
+/csharpexec.sh.in
+/install-reloc
+/javacomp.sh.in
+/javaexec.sh.in
+/moopp
+/reloc-ldflags
+/relocatable.sh.in
+/unused-parameter.h
+/warn-on-use.h
+
+# Files brought in by "automake --add-missing --copy":
+/compile
+/depcomp
+/elisp-comp
+/install-sh
+/mdate-sh
+/missing
+/ylwrap
+
+# Other files brought in by autogen.sh:
+/config.guess
+/config.sub
+
