@@ -1,0 +1,81 @@
+/* mpfr_check -- Check if a floating-point number has not been corrupted.
+
+Copyright 2003, 2004, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
+Contributed by the AriC and Caramel projects, INRIA.
+
+This file is part of the GNU MPFR Library.
+
+The GNU MPFR Library is free software; you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 3 of the License, or (at your
+option) any later version.
+
+The GNU MPFR Library is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with the GNU MPFR Library; see the file COPYING.LESSER.  If not, see
+http://www.gnu.org/licenses/ or write to the Free Software Foundation, Inc.,
+51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA. */
+
+#include "mpfr-impl.h"
+
+/*
+ * Check if x is a valid mpfr_t initializes by mpfr_init
+ * Returns 0 if isn't valid
+ */
+int
+mpfr_check (mpfr_srcptr x)
+{
+  mp_size_t s, i;
+  mp_limb_t tmp;
+  volatile mp_limb_t *xm;
+  mpfr_prec_t prec;
+  int rw;
+
+  /* Check sign */
+  if (MPFR_SIGN(x) != MPFR_SIGN_POS &&
+      MPFR_SIGN(x) != MPFR_SIGN_NEG)
+    return 0;
+  /* Check precision */
+  prec = MPFR_PREC(x);
+  if (prec < MPFR_PREC_MIN ||
+      prec > MPFR_PREC_MAX)
+    return 0;
+  /* Check mantissa */
+  xm = MPFR_MANT(x);
+  if (xm == NULL)
+    return 0;
+  /* Check size of mantissa */
+  s = MPFR_GET_ALLOC_SIZE(x);
+  if (s <= 0 || s > MP_SIZE_T_MAX ||
+      prec > (mpfr_prec_t) s * GMP_NUMB_BITS)
+    return 0;
+  /* Acces all the mp_limb of the mantissa: may do a seg fault */
+  for (i = 0 ; i < s ; i++)
+    tmp = xm[i];
+  /* Check singular numbers (do not use MPFR_IS_PURE_FP() in order to avoid
+     any assertion checking, as this function mpfr_check() does something
+     similar by returning a Boolean instead of doing an abort if the format
+     is incorrect). */
+  if (MPFR_IS_SINGULAR (x))
+    return MPFR_IS_ZERO(x) || MPFR_IS_NAN(x) || MPFR_IS_INF(x);
+  /* Check the most significant limb (its MSB must be 1) */
+  if ((xm[MPFR_LAST_LIMB(x)] & MPFR_LIMB_HIGHBIT) == 0)
+    return 0;
+  /* Check the least significant limb (the trailing bits must be 0) */
+  rw = prec % GMP_NUMB_BITS;
+  if (rw != 0)
+    {
+      tmp = MPFR_LIMB_MASK (GMP_NUMB_BITS - rw);
+      if ((xm[0] & tmp) != 0)
+        return 0;
+    }
+  /* Check exponent range */
+  if (MPFR_EXP (x) < __gmpfr_emin ||
+      MPFR_EXP (x) > __gmpfr_emax)
+    return 0;
+  return 1;
+}
