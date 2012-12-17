@@ -1,0 +1,54 @@
+----------------------------------------------------------------------
+Version 0.4.1 (rgerhards), 2012-04-16
+- fixed configure.ac in regard to math lib
+----------------------------------------------------------------------
+Version 0.4.0 (rgerhards), 2012-02-21
+- rename convert tool to prevent name clash with ImageMagick's tool
+- support for decoding json added
+- bugfix: ee_newFieldFromNV() did not work correctly
+  value was set, but number of values were not corrected, this the
+  value could not be used (looked like non-present)
+----------------------------------------------------------------------
+Version 0.3.2 (rgerhards), 2011-11-22
+- API enhancements:
+  * added capability to enumerate tags inside a tagbucket
+  * added capability to obtain tagbucket for an event
+    --> ee_EventGetTagbucket()
+  * added capability to add a string value to a field in one call
+    --> ee_addStrValueToField()
+  * added ee_getTag(), ee_setTags()
+- added additional parser
+  * RFC5424Date
+- potentially problematic API change: in earlier versions, the 
+  function ee_TagbucketHasTag() was errornously name ee_BucketHasTag().
+  This has been corrected, potentially resulting in API
+  incompatibility. We have accepted this, because we are at level 0.x
+  AND know that potentially no current user has ever used this
+  function, but instead the upper-layer equivalents. But if thinks
+  break, you now know why ;)
+- flat tags are no longer encoded in the CEE encoders as CEE does not
+  support flat tags. However, this can be turned on via context flags,
+  if desired
+- bugfix: compile problems under Solaris
+  closes: http://bugzilla.adiscon.com/show_bug.cgi?id=253
+- bugfix: ee_EventGetTagbucket() always returned -1 (error)
+----------------------------------------------------------------------
+Version 0.3.1 (rgerhards), 2011-04-18
+- API extensions
+- brought tag handling a bit inline with upcoming 0.6 draft CEE spec
+----------------------------------------------------------------------
+Version 0.3.0 (rgerhards), 2011-04-06
+- extended API
+- added support for tags
+----------------------------------------------------------------------
+Version 0.2.0 (rgerhards), 2011-04-01
+- added additional parsers
+  * Time12hr
+  * Time24hr
+  * ISODate
+  * QuotedString
+- added CSV encoder (very experimental)
+- removed dependency on libxml (which we currently do not need)
+----------------------------------------------------------------------
+Version 0.1.0 (rgerhards), 2010-12-09
+Initial public release.
