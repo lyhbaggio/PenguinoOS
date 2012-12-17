@@ -1,0 +1,878 @@
+New in 2012.12
++ ~/.perl6/lib is gone from the default include path
++ fixed indent method's handling of empty lines
++ fixed .indent(*)
++ parse errors now formatted like in STD, with color
++ location of parse error now indicated with context
++ highwater algorithm implemented, greatly improving accuracy of parse error
+  line numbers and locations in a range of cases
++ some parse errors now report what the parser was looking for at the time the
+  parse failed
++ better errors for unmatched closing brackets and two terms in a row
++ uniq now has === semantics as specified, not eq semantics
++ junction auto-threader optimized and is an order of magnitude faster
++ implemented sub term:<foo>
++ implemented texas versions of the Set and Bag operators
++ good error for use of . to concatenate strings
++ flattening large lists of Parcels now happens in about half the time
+
+New in 2012.11
++ user-defined operators only affect the parser in the scope they are declared in
++ fixed pre-compilation of modules containing user-defined operators
++ implemented precedence related traits (equiv, looser, tighter, assoc)
++ Perl 6 grammar NFAs are pre-computed, saving some work on each invocation; this
+  shaved around 10% off the time needed to run the spectests
++ redeclaring a class as a role now gives a better error
++ the < foo bar > syntax in regexes now respects :i
++ << ... >> now interpolates, respecting quoting and pairs
++ fix error reporting for not-found dynamic variables
++ many protos now have much narrower signatures
++ quote parsing implementation aligned with the approach STD uses
++ regexes and quotes have better support for user-selected delimiters
++ quote adverbs
++ heredocs
++ carry out IO::Path.dir deprecation
++ implement infix:<andthen>
++ macro arguments now carry their lexical environment properly
++ postfix operators of the form '.FOO' take precedence over method calls
++ version control markers detected and gracefully complained over
++ INIT phasers now work as r-values
++ our ($x, $y) style declarations fixed
++ take and take-rw now evaluate to the taken value
++ implemented cando method on Routine
++ FIRST/NEXT/LAST can now be used in all types of loop (previously limited to for)
++ implemented operator adverbs
++ implemented :exists and :delete subscript adverbs and on hashes
++ implemented :p, :k, :v and :kv subscript adverbs on arrays and hashes
++ fixed shell words post-processing like << foo "bar $baz" >>
++ byte-order mark at the beginning of a file is now ignored
++ fixed bug that could lead to disappearing symbols when loading pre-compiled modules
++ Configure no longer passes --optimize to Parrot if --parrot-option is specified
++ deprecated current &foo semantics
++ fixed #`foo and friends at start of statementlist
++ simplify setting line number of compile-time exceptions
++ made :($a, $b) := \(1, 2) update $a and $b
+
+New in 2012.10
++ :60[24, 59, 59] radix form
++ delegation to methods using the handles trait
++ fixed serialization of Buf
++ improved handling of :P5 regexes (more features, less bugs)
++ determining that an object lacks a method is usually now much faster
++ reduced memory usage of Match objects and optimized their construction a little
++ some code-generation improvements related to void context
++ implemented :dba('...') modifier in regexes
++ various error messages improved through use of :dba('...') in the Perl 6 grammar
++ implemented 'x' in pack
++ added $*CUSTOM-LIB
++ eval in a method can now see self, attributes and $?PACKAGE
++ each REPL line no longer implies a fresh GLOBAL
++ fixed some Pod parsing issues with Windows newlines
++ fixed interaction of :i and LTM (alternations and protoregexes now respect it)
++ import of custom meta-objects only affects the scope they are imported into
++ made <-> lambdas work
++ can now parse nested pairs of quote delimeters, like q{ foo q{ bar } baz }
+
+New in 2012.09.1
++ is-prime and expmod
++ smart matching against Signature literals
++ binding to signatures in declarators
++ the is hidden and base traits
++ ability to set encoding on sockets temporarily removed (reverts to 2012.08 behavior)
+
+New in 2012.09
++ class Iterable does not inherit from class Cool anymore
++ basic macro unquoting
++ basic support for m:P5/.../ regexes
++ support for indirect type names in routine and type declarations
++ compiler now built with QAST-based NQP, which generates better code, thus
+  making the compiler a little faster
++ support for "is export" traits on constants
++ implemented Str.wordcase
++ can now write more complex proto subs and methods, using {*} to enter the
+  dispatcher
++ tie-breaking with constraints now picks the first matching one rather than
+  demanding they be mutually exclusive
+
+New in 2012.08
++ tclc implemented
++ --> ReturnType in signatures and prefix type constraints of routine return
+  types are honored
++ reduced memory usage at build time by around 35% - 40%
++ the argument to IO::Socket.recv is now interpreted as a number of characters
++ enum lists and arguments to parametric roles are now evaluated at compile time
++ switched to new internal AST and backend representations (QAST and PIRT)
++ removed deprecated routines Str.bytes and Str.lcfirst/&lcfirst
++ errors from traits now contain file name and line number
++ IO::File and IO::Dir have been removed
++ inliner has been improved and can inline a wider range of routines
++ simple implementation of the 'soft' pragma
++ fixed over-eager treatment of numeric literals as int rather than Int in cases
+  where they appeared each side of an infix operator
++ detect circularities in module loading
++ sigilless variables in signatures when proeceed by | or \
++ prevented blocks that declare variables turning into hash constructors
++ made pre-compilation complain if dependencies are not pre-compiled yet
++ fixed interpolation of double-quoted strings in regexes
++ fixed issue with Num.new not being friendly to subclassing
++ implemented handling of complex numbers in Str.Numeric
+
+New in 2012.07
++ Deprecated SAFE.setting in favor of RESTRICTED.setting
++ Ranges can now interpolate in argument lists
++ The built-in meta-objects (such as Metamodel::ClassHOW) now inherit from Any
++ &open now supports :enc/:encoding
++ Exception.fail, .resumable and .resume
++ Changed &dir to return IO::Path objects, not strings
++ Deprecated .bytes, .ucfirst, and .lcfirst
++ &slurp now supports :bin
++ &spurt implemented
++ cleaned up Version implementation
++ fixed :s file test
++ recognize obosolete rand() and rand(N) forms at compile time
++ anonymous subset types 'subset :: of Int where { $_ > 0 }'
+
+New in 2012.06
++ Rakudo is now compiled with the same regex engine as user-space regexes use
++ transitive longest-token matching in protoregexes
++ changed the output of Match.gist
++ string to number conversion now fails for non-numbers
++ string to number conversion now recognizes radix notation
++ string incrementation is now aware of more scripts
++ <|w> word boundary in regexes implemented
++ more errors from within the meta model now contain line number and file name
++ &push and &unshift functions can now autovivify
++ user-defined operators properly participate in LTM
++ Rakudo's C code is now compiled with optimization switches turned on
++ basic module loading tracing with the RAKUDO_MODULE_DEBUG=1 env variable
++ longest token matching with alternations
++ require with argument list
++ compile time errors in loaded modules now show a module loading backtrace
++ improved list and .map handling
++ can now use | to flatten a pair into an argument list as a named argument
+
+New in 2012.05
++ meta ops //=, ||= and &&= now short-circuit properly
++ Failure objects don't blow up the REPL anymore
++ allow case insensitive regex matches without ICU in limited cases
++ %*ENV now propagates into subprocesses
++ RAKUDOLIB env variable supported in addition to PERL6LIB
++ -I and -M command line options
++ $?LINE and $?FILE variables
++ warnings now include line number from program, not from CORE.setting
++ reduction meta-operator on list-associative ops now has correct semantics
++ now have :th alias for :nth in Str.match
++ import collisions now report the name of the module that is to blame
++ ms// fixed
++ <$x> in regexes caches the compiled regex, which can be a big performance win
++ implemented temp and let
++ 'use' can now import by tag name
++ 'use' with positional arguments
++ lib.pm
++ updated calling conventions for traits
++ implemented fff flip-flop operator; improvements to ff form also
++ removed current directory from default library search path
++ 'import' works
++ symbols installed in EXPORT in all nested packages, not just UNIT::EXPORT
++ enumeration types can be used as roles
++ END phasers now run when program ends with exit or an exception
++ fix Rat.floor and .ceiling to work for large numbers
++ improved Rat stringification
++ Real is now a role, as it should be
++ implemented < foo bar baz > syntax for alternations in regexes
++ implemented <( and )> syntax for setting from/to of match  in regexes
++ support for non-Int enums
++ basic support for Version literals
++ chmod now available as a function
++ roundrobin implemented
++ fixed a bug in precompilation of modules that use roles from other modules
++ basic implementation of pack and unpack
++ implemented substr-rw, which provides an l-value (assignable) substring
++ implemented <~~> (recursive call into self) syntax in regexes
++ 'LAZY' statement prefix
+
+New in 2012.04.1
++ autvivification for arrays and hashes
++ more robust module precompilation
++ improved infrastructure for calling C code
++ $.foo style calls now contextualize correctly
++ &infix:<cmp> now return members of the Order enum in all cases
++ --doc=format now loads Pod::To::format and uses it for rendering
++ 'lib/' is no longer in the default include path
++ improved Parameter.perl
++ add .changed, .modified and .accessed methods to IO
++ improved --help output
++ install precompiled test module for speedup
++ fixed printing of backtraces when regexes are in the call chain
++ case insensitive regex matches now also work for interpolated variables
+
+New in 2012.04
++ 'defined' is now a listop instead of a prefix op
++ fixed :16('0d...')
++ implemented simple interpolation in names in type declarations (class ::(const) { })
++ $=POD renamed to $=pod
++ fixed slicing of non-lists with infinite ranges
++ fixed accidental over-serialization, cutting ~300KB off each pre-compiled module
++ scalar positionals no longer treated as slices
++ implemented Routine.package
++ join will now always reify at least 4 elements of a list if possible
++ warnings now have line numbers
++ brought back Str.indent
++ ban declaring pseudo-packages, with a helpful error
++ a name followed by :: now returns .WHO, so Foo::<&bar> style lookups work
++ Exception.Bool now returns true
++ avoided re-parsing of longname, which speeds up the parse a bit overall
++ implemented MY, CALLER, OUTER, UNIT, CORE, SETTING and DYNAMIC pseudo-packages
++ implemented ::<$x> and ::{'$x'} style lookups
++ some small optimizations to various Str built-ins and MapIter
++ improved --doc output
++ added $*PERL
++ implemented IO::ArgFiles.slurp
+
+New in 2012.03
++ updated to dyncall 0.7
++ infix:<eqv> now autothreads over junctions
++ more typed exceptions
++ pre-compiled modules/settings are now serialized, not re-built on load
++ startup time is now about 25% of what it once was
++ significant memory and time reduction (~40%) when pre-compiling modules/settings
++ BEGIN and CHECK now work in r-value context
++ constant declarator now works with non-literals on the RHS
++ implemented Set, Bag, KeySet and KeyBag types
++ implemented :exhaustive and :nth match adverbs
++ implemented ENTER, LEAVE, KEEP and UNDO phasers
++ implemented FIRST, NEXT and LAST phasers in for loops
++ implemented START phaser, including use of it in r-value context
++ implemented also syntax for adding traits inside a block/package
++ implemented macro declarations and quasi quotes (sans placeholders)
++ implemented anonymous enums
++ 'our multi' now dies (used to ignore the 'our')
++ implemented PRE and POST phasers
++ ~25% performance improvement to array indexing
+
+New in 2012.02
++ catch duplicate accessor generation required of "has $.x; has @.x;"
++ many more typed exceptions thrown
++ undeclared attributes mentioned in signatures now caught at compile time
++ empty Buf is now False in boolean context
++ implemented <prior>
++ implemented /<Foo::Bar::baz>/ syntax
++ /<x>/ can call a predeclared lexical regex x
++ conjugate is now called conj
++ enumeration values .gist to just the key, not the full name
++ <!> in regexes fixed
++ implemented Match.make(...) method
++ better error reporting for improper use of nextsame and friends
++ initializers now parsed as part of a variable declarator
++ trailing whitespace now removed from Pod declarator blocks
++ List.tree made more useful
++ implemented rename and copy functions
++ ().pick and ().roll now return Nil
++ default MAIN usage message includes .WHY of the candidates
++ X::Base eliminated in favor of Exception
++ various range iteration fixes; Num ranges now produce Num lists
++ LHS of the xx operator is now thunked
++ can now declare state/constant/our in regexes (before, only :my worked)
++ improved backtraces
++ catch constructs that require an invocant but don't have one
++ catch uses of virtual method calls in submethods and attribute initializers
++ improved parsing and performance of reduction meta operators
++ Rat arithmetic now properly defaults to Num if the denominator is too big
++ FatRat implemented
++ implemented long forms of regex adverbs (e.g. "ignorecase" maps to "i")
++ fixed "but True" and "but False"
++ object hashes, with the my %h{SomeObjectType} syntax
++ implemented Int($x) style coercions
++ implemented Capture.perl
+
+New in 2012.01
++ -c command line option re-implemented
++ take flattening bug fixed
++ duplicate named parameter names detected
++ fixed clone being too shallow with regard to containers
++ fixed negative modulo for bigint
++ better Routine.perl
++ .DEFINITE macro implemented
++ .^methods, .^attributes and .^parents now support :excl (the new default) and :all
++ Array.delete implemented
++ restored basic -n and -p functionality
++ improved parameter introspection
++ fixed operations on bigints when the first operand had been mixed in to
++ fixed multi-dispatch narrowness calculation for native types
++ binding to array and hash elements
++ added Order enumeration, and updated cmp and <=> to use it
++ adding various missing magicals, such as &?ROUTINE and ::?ROLE
++ accessor generation for my $.x and our $.x cases
++ fixed @x>>.() (hyper-invocation)
++ updated Complex.Str to match current spec
++ fixed eval to see GLOBAL properly
++ implemented 0 but Answer(42) style mix-ins
++ fixed various issues in scoping/handling of $/
++ fixed usage of make in a regex (previously, only worked in action methods)
++ optimized Range.roll and Range.pick for large ranges
++ fixed non-numeric, no-Str ranges
++ fixed build on Cygwin
++ fixed regex backtracking into subrules and captures
+
+New in 2011.12
++ improved protoregex support, including NFA caching
++ <before ...> and <after ...> (lookahead and lookbehind)
++ backslash sequences in character classes
++ fixed quantified captures and :r interaction bug
++ optimized match object construction, ListIter, substr and chomp
++ improved performance of send/get on sockets
++ optimizer detects missing private methods and simplifies calls (level 3 only)
++ fixed some issues when an array was assigned to itself, maybe using .=
++ implemented .wrap and .unwrap, plus wrap handles with a .restore method
++ implemented .trans on strings
++ unicode properties can be matched against in regexes
++ binding to @, % and & sigils now checks for the appropriate role
++ assignments to variables declared with the & sigil now checked for Callable
++ typed hashes, partial support for typed arrays
++ some parametric role fixes
++ can now use but operator with a type object
++ smartmatching of regexes against arrays and hashes
++ socket IO now implements .write and custom input line separators
++ implemented getc
++ implemented .WALK
++ implemented ff, ^ff, ff^ and ^ff^
++ implemented .REPR macro
++ implemented Proxy class
++ some typed errors are now thrown from within the compiler
++ stubbed methods from roles now require those methods to be implemented
++ updated docs/ROADMAP
++ .WHICH now returns ObjAt objects
++ defining new operators
+
+New in 2011.11
++ CATCH blocks are now much closer to spec
++ big integer support
++ basic protoregex support with NFA-driven LTM for some declarative constructs
++ correct default values for natively typed variables
++ fixed initialization of state variables
++ improved support for natively typed variables
++ catch more uses of undeclared variables
++ splice() is now implemented
++ uniq() is now implemented
++ several runtime errors now throw properly typed error objects
++ various performance improvements, for example to the X meta op and Str.succ
++ improved support for MAIN argument parsing
++ fixed lexicals/recursion bug
++ IO.copy is now implemented
+
+New in 2011.10
++ operators and functions with native type arguments
++ detection of call to undefined routines at CHECK time
++ various optimizations: inlining of operators, CHECK time dispatch decisions
++ performance improvements of MapIter
++ support @$foo style derefencing/coercion
++ Exception.backtrace
++ eval() has stopped to catch exceptions
+
+New in 2011.09
++ Rewritten meta object protocol and object storage
++ many speedups
++ Int, Num and Str are now far more lightweight
++ much more robust handling of infinite list
++ basic LoL (List of Lists) support
++ :U and :D type modifiers
++ protos and multis now conform to the new spec
++ improved enum support
++ basic 'constant' declarator
++ .WHAT and friends as macros
++ chrs sub and method
++ support for .gist
++ run() has been renamed to shell() to conform to current spec
++ hyper methods now descend into nested data structures
++ basic safe mode (through --seting=SAFE)
++ recording and reporting of test timings (tools/test_summary.pl)
++ Pod parsing and --pod=text option
++ basic support for .WHY
++ greatly improved BEGIN-time support
++ traits applied at BEGIN time for packages, routines and attributes
++ parametric roles reify types properly, fixing many bugs
++ better handling of type variables
++ support $?CLASS, which is generic in roles
++ support import/export of custom meta-objects for built in package declarators
++ custom meta-objects can override method dispatch
++ faster, allocation-free multi-dispatch cache
++ a custom BUILD does not suppress default values
++ undeclared attributes detected and reported at compile time
++ basic support for native int/num types on lexical variables
++ int/num as attributes are stored compactly in the object body
+
+New in 2011.07
++ fractional powers of negative numbers now result in Complex numbers
++ obtain spectests from a specific branch of the `roast' repo
++ fix bug that prevented build on systems with little RAM
+
+New in 2011.06
++ added take-rw built-in
++ numerous build system improvements
++ assignment now evaluates arguments right-to-left
+
+New in 2011.05 release
++ added a call counter for builtins in Perl 6-level subroutines
++ gcd (greatest common divisor) and lcm (largest common multiple) operators
++ build system improvements
++ added --ignore-parrot-rev option to Configure.pl
++ Configure.pl now creates "config.status" file
++ fixed relational operators when used with NaN
++ implemented Int.base
++ speedup smart-matching against numbers and Str.comb with default arguments
++ added RAKUDO_SUBLOG environment var for tracking subroutine calls
++ overall performance speedups
+
+New in 2011.04 release
++ implemented Str.indent
++ A new, much simpler API and implemention of IO::Socket::INET
++ Unified error messages to use "Cannot"
+
+New in 2011.03 release
++ improved error message on type check failure in assignment
++ -n and -p command line options
++ Test.pm's skip() now has argument ordering consistent with todo()
++ implemented complex conjugation
++ more IO methods related to stat
+
+New in 2011.02 release
++ IPv6 support
++ more robust numeric exponentation
++ --ll-backtrace command line option for PIR level stack traces
++ future-proof for upcoming generational garbage collector in parrot
++ various constructs now return Nil
++ infix:<orelse> implemented
++ infix:<^^> and infix:<xor> improved
++ negation metaoperator is now restricted to operators that return Bool
+
+New in 2011.01 release
++ faster subroutine calls (type cache)
++ 'handles RoleName' now works
++ Test.pm: s/done_testing/done/
++ non-spec debugging pragma Devel::Trace
++ improved parsing of keyword boundaries
++ sped up .comb
+
+New in 2010.12 release
++ new .trans algorithm
++ fixed $*PID on MacOS X
++ don't register names of anon types
++ configuration improvements
++ updated Any functions
++ fix $*IN_DECL leakage
++ implemented Hash.hash
++ Temporal updates
++ Buf.decode fixed
++ open() fixed for binary flag
+
+New in 2010.11 release
++ now works with parrot on git
++ implemented qw//
++ 5x speedup of .trans 
++ various improvements to Set
++ don't use deprecated charset ops anymore
++ Bool.Bool and Bool.so now return False
++ implemented &elems
++ improved error for Date.new(Str)
++ improvement on hyperoperators
++ indexings like .[0 .. *-1] work now
+
+New in 2010.10 release
++ True and False now stringify according to the specification
++ basic form of 'require' for run time module loading
++ warnings from the setting now produce line numbers in the users' program
++ local time zone available as $*TZ
++ more consistent line numbers from warnings
++ getting and setting attributes via introspection
++ implement samespace, ms// and ss///
++ hyper operator invoving = can now modify their arguments
++ speed up Str.flip by over a factor of 100
+
+New in 2010.09 release
++ new methods on IO concerning the modify and access time of files
++ S32::Temporal now completely implemented
++ Instants and Durations
++ speedup for slurp() and .reverse built-ins
++ various improvements to the Set type
++ revamp of series operator code, and adaption to new spec
++ implement ...^ up-to-but-excluding-series operator
++ allow :r and :ratchet modifiers on regex quoting constructs
++ Bool.pick
++ significantly improved enum implementation
+
+New in 2010.08 release
++ syntactic adverbs on substitutions, rx quotes and m//, e.g. '$x ~~ s:2nd/a/b/'
++ updated ROADMAP
++ speedups for integer operations
++ the Match class's .perl method now produces useful, roundtrippable Perl code
++ the MAIN subroutine can now parse short arguments
++ the cmp and <=> operators now work on more numeric types
++ the Buf class now has .pack and .unpack methods with partial functionality
++ numeric bitshift operators now have the correct precedence
++ smartmatch against True or False is now an error
+
+New in 2010.07 release
++ support for delegation via 'handles'
++ implemented binding with := and read-only binding with ::=
++ implement OS related built-ins like mkdir, cwd
++ improved diagnostics in Test.pm
++ basic binary IO, buffer encoding and decoding
++ magic $*ARGFILE file handle
++ more robust closures
++ multi-level Array and Hash element autovivification
++ perl6 --version now identifies the exact git sha1 and parrot version
++ implemented 'is rw' trait on classes
++ file tests now work through IO, ie.  'README'.IO ~~ :e
++ generic, multi-level Whatever-currying (eg grep !(* % 2), @list)
++ improved error reporting in many cases, especially multi-method dispatch
++ implemented backtracking into capturing groups and subrules
++ phasers refactored, they can now return results and see the setting
++ custom circumfix operators
++ basic .wrap and .unwrap implementation
++ weighted Hash.pick
++ .perl on custom classes now dumps attributes
++ Basic implementation of the ==> and <== feed operators
++ Int ~~ Num is no longer true, as per spec; use Numeric instead
++ Improvements to enumerations
+
+New in 2010.06 release
++ new list model with immutable iterators, lots of fixes to lists and arrays
++ variable interpolation into regexes
++ compile time Whatever currying for infix, prefix and postfix operators
++ autoprinting in the REPL shell
++ in @*INC, the current directory '.' now comes at the end, as in Perl 5
++ basic Buf implementation: Str.encode/Buf.decode work for UTF-8
++ proper Perl 6 match objects
++ Backtraces with Perl 6 subroutine names and line numbers
++ MAIN and USAGE subs
++ basic version of Str.trans
++ mix-ins with non-roles (5 but 'string')
++ @*ARGS is now read-write
++ IO::Socket::INET again works in CORE
++ hash and array slices have been greatly improved
++ basic support for callframe() and CallFrame type
+
+New in 2010.05 release
++ implemented lexical and anonymous classes and roles
++ manual pages are now installed
++ the .match method now understand the adverbs :c; :p, :nth, :x, :g, :ov
++ test reports with tools/test_summary.pl now record detailed timing information
++ many improvements to numeric handling
++ implemented S (sequential) meta operator
++ fixed placeholder parameters ($^a, $^b)
++ basic enum implementation
++ implemented List.classify
++ turned on an additional 47 test files
++ further improved error messages
++ implement zero-argument versions of many binary operators
++ basic interoperation with Perl 5 through the external Blizkost project
+
+New in 2010.04 release
++ interpolation of expression ending in postcircumfixes into double-quoted
+  strings (for example "cards: @cards.sort()")
++ prefix and postfix hyper operators
++ multi subs now work properly when lexically scoped
++ implemented item assignment with tighter precedence than the comma operator
++ loading of .pm6 modules
++ Basic implementation of Numeric and Real roles
++ implementation of DateTime and Date built-in types
++ named regexes can be declared outside of grammars again
++ support for numbers with arbitrary radix, including fractional numbers (:16<DEAD.BEEF>)
++ implemented fmt(), printf() note() and IO.getc built-in routines
++ infix meta operators now inherit the precedence of the modified operator
++ &[+] short name for infix operators
++ hash slices
++ signature literals
++ smart-matching against signatures
++ more consistent implementation of prefix:<|> for interpolating things into
+  signatures
++ better error message on accidental usa of Perl 5 features such as << as
+  bit shift operators, and catch many perl 5 magic variables
++ implemented type Cool
++ implemented anonymous classes and roles
++ implemented $*PID
++ method introspection works again
++ better error message for calling non-existent routine in a namespace
++ now run programs with the setting as an outer lexical scope, as per spec
+
+New in 2010.03 release
++ The trigonometric functions and the Rat class have received numerous
+  updates, making them faster and more complete
++ .^parent now works again
++ The invocation logic has received various speedups
++ Hash creation has been optimized
++ Various improvement related to constant internal strings have led to
+  slight speedups
++ .pick, .sort, .keys, .values, .kv, sprintf were reimplemented, ported
+  from the old 'alpha' branch
++ The statement modifier for loop works again
++ Various parsing bugs have been sorted out; one having to do with
+  closing curly braces at the end of a line not terminating the statement
++ .CREATE, .BUILDALL and .can in the OO system have received attention,
+  some of it leading to mild speedups
++ $*PROGRAM_NAME and @*ARGS now work
++ Deferral works again (nextsame/nextwith/callsame/callwith)
++ Array.delete works again
++ Fixed .?, .+ and .* along with matching latest spec on .?
++ Switch untyped variables to default to Any instead of Mu
++ &foo lookup syntax works again (including for operators)
++ Various cases of eqv operator implemented
++ Make overriding postcircumfix:<( )> work again, this time per spec
++ Make junctions of code objects invokable again
++ Lazy implementation of the Z operator
++ Added back @*INC
++ Read-only %*ENV support
++ Grammars work again
++ Implemented regexes taking parameters
++ Implemented proto-regex declarations
++ Initial work on getting subset types working again
++ Add back many of the file test methods
++ Added docs/S11-Modules-proposal.pod documenting how we intend to handle
+  modules through Rakudo *
++ First cut of locating and loading modules with a given version and/or
+  authority, and in absence of a requirement selection of the latest
+  version by default if multiple are available.
++ Many improvements to the series operator
++ Implemented 'need' and a first cut of 'import'; 'use' works in terms
+  of them
++ Import is now into the lexical scope by default, as per spec
++ Removed requirement to hand-pre-compile .pm to .pir for use with 'use'
++ Improved multi-dispatch candidate not found errors to include details of
+  the available candidates
++ Implemented 'use MONKEY_TYPING'
++ Many cases of smart-match work again
++ $x.Foo::bar() and $x.$y() work again
++ $.foo(1,2,3) works again
++ !, R, X and Z meta-operators work, albeit with some caveats
++ s/foo/bar/ and s[foo] = 'bar' substitution syntax implemented
++ Array.rotate added back
++ User defined operators (prefix, postfix, infix) working again
++ Many more small but important improvements to built-in types and functions
++ Various other bug fixes
++ ROADMAP updates
+
+New in 2010.02 release
++ The branch formerly known as 'ng' becomes the new master branch
++ The previous master branch is now Rakudo/alpha
++ NQP-RX replaces NQP in the Parrot Compiler Toolkit, enabling the
+  source code of the compiler to be written in a subset of Perl 6 that
+  is much more powerful, most importantly with regexes, as the name
+  suggests
++ The revised Perl6/Grammar.pm is much closer to the canonical STD.pm
++ Regexes may declare contextual and lexical variables
++ Lazy lists and arrays are partly implemented
++ The object metamodel is largely written in NQP-RX instead of PIR
++ The name of the root of the object hierarchy is now Mu
++ The term 'undef' is gone, replaced by Nil, Mu or *.notdef depending on
+  context
++ Builtin classes derive from Cool which derives from Any
++ The refactored source code is more compact and more easily extended
++ The number of spectests passed has reduced from a peak of 32731 in
+  alpha to 24221, because porting the functionality to the new master
+  is still ongoing
++ Release numbering changes from 'dash' to 'dot' delimiter to get on
+  better with various package management systems
+
+New in 2010-01 release
++ Added method form of eval.
++ Implemented :s and :l file operators
++ Added functions for logarithms using $base
++ Refactored subroutine calls to use new Context structures in Parrot 2.0.0
+
+New in 2009-12 release
++ Only minor maintenance was done because all attention was being given
+  to the Rakudo/ng branch, bringing in the new nqp-rx bootstrap compiler
+
+New in 2009-11 release
++ Rakudo now uses Parrot's updated calling convention features
++ support unpacking of arrays, hashes and objects in signatures
++ changed .pick to use :replace instead of :repl
++ many core setting optimizations and bugfixes
++ IO::Socket.recv() has been extended to accept a parameter specifying the
+  number of bytes which will be received
++ Rakudo now looks up %INC in the right namespace when loading libraries for
+  foreign languages
+
+New in 2009-10 release
++ smolder reports for spectest runs
++ more Complex trig functions
++ pure Perl 6 implementation of the Complex type
++ some variants of the new series operator
++ correct construction of twigilled colonpairs
++ infix:<eqv>, .pred and .succ for the Rat type
++ when configuring with --gen-parrot, pass --optimize to parrot's Configure.pl
++ moved more operators to the setting and thus made them overloadable
++ { %hash } now correctly constructs a hash, not a closure
++ new, faster low level Signature type
++ improved Signature introspection
++ new, much faster signature binder
++ improved various error messages related to signature binding
++ signature literals now supported
++ binding of named arguments to positional parameters
++ attributive parameters implemented
++ package blocks now run as immediate blocks, as per the spec
++ lexical variables declared outside of packages now visible inside them
+
+New in 2009-09 release
++ updates to numeric operators: infix</>(Int, Int) creates a Rat
++ Rat (rational) numbers
++ overloadable builtin operators
++ contextual variables
++ setting values in %*ENV now works
++ partial support for trigonometric functions of complex numbers
++ better handling of custom traits, many builtin traits moved to core setting
++ improved type dispatch for builtin operators, type coercions
+
+New in 2009-08 release
++ Rakudo must now be built from an installed parrot, and can be installed
+  itself
++ separate Perl 6 meta class
++ introspection on roles
++ declaration of methods in the meta class by writing method ^newmethod($obj)
++ :tree options for parent class, attribute and role introspection
++ allow some custom postcircumfix:<( )> methods
++ moved more built-ins into the setting
++ implement operators infix:<!%> (divisibility test) and prefix [||] and [//]
++ updated ROADMAP in preparation for the Rakudo Star release
++ instead of throwing nasty parse errors, Rakudo now informs you that feed
+  operators are not yet implemented
++ improved testing: planless testing with done_testing(); better diagnostic
+  output from is()
++ the syntax for embedded comments has changed
++ embedded Pod comments are now recognized
++ support for defining traits and applying them to routines, classes and roles
++ "hides" trait (class A hides B { ... }), and "is hidden"
++ better handling of slurpy and optional in multi-dispatch
++ use of .?, .+ and .* with indirect calling form ($obj.+@cands)
++ .can improved; now returns something usable as an iterator
++ lastcall implemented
+
+New in 2009-07 release
++ extensive refactor of the multi dispatch code to get closer to the spec
++ better handling of named arguments in multi dispatch
++ operators and traits can be defined in the setting
++ basic implementation of the series and eqv operators
++ refatored trait code to match updated specification
++ implemented more cases of smartmatching against hashes
++ fixed state variables to work with //= and ||= initialization
++ improved testing: when Rakudo dies with  'Null PMC Access' it is never
+  considered a success
++ implemented the :all flag to split which keeps captures
++ added List.rotate builtin
++ nextwith and callwith now also work properly with methods
++ take() without outer gather now merely warns
++ introspection of roles and attributes
+
+New in 2009-06 release
++ refactored and corrected object initialization (BUILD/CREATE)
++ attributes initilizations can now use attributes defined earlier
++ method calls are now faster
++ basic safe mode that forbids IO and execution of external programs
++ implemented meta operators for user defined operators
++ initial implementation of Temporal (date/time related objects)
++ type checking of implicit return values
++ improved introspection methods
++ cleaned up IO methods
++ improved "is export" handling for modules and setting
++ automatically transcode to iso-8859-1 for faster parsing when possible
++ refactored and corrected assignment, .succ, .pred, C<++>, C<-->, 
+  postcircumfix:<[ ]>, Whatever
++ "module Foo;"  now allows statements before it
++ improved Unicode string handling
++ better support for Str increment/decrement in Unicode ranges
++ many performance improvements
+
+New in 2009-05 release
++ updated docs/ROADMAP
++ basic support for custom operators
++ operators can now be referenced as &infix:<+>
++ meta operator support for custom operators
++ cross-language library loading
++ stack traces now include source file name and line number
++ implemented Regex type
++ .WALK (parent classes in configurable order)
++ .name method on routines
++ refactored enums, thereby fixing many enum related bugs
++ fixed namespace of eval()ed code
++ implemented parallel dispatch (@objects>>.methods)
++ initial support for «...» quotes
++ text files now default to utf8 encoding
++ fixes to Match.perl and Match.chunks
++ implemented 'constant name = $value'
++ documented build dependencies
++ grep() accepts general matcher, things like @list.grep(Int) work
++ trigonometric functions (sin, cos, ...) now available via 'use Num :Trig'
++ qx{} quotes now work (except on Windows)
++ hyper-operators on hashes now work (%a >>+<< %b)
++ initial implementation of $foo.@bar
++ refactored wrap and unwrap to work with candidate lists; fixes some bugs
++ refactored/improved callsame and callwith, and added nextsame and nextwith
+  (only work for dispatches of the form $foo.@bar and with wrap so far)
++ partial implementation of .^parents and .^methods
++ can initialize attributes in terms of others
++ many other bug fixes and performance enhancements
+
+New in 2009-04 release (#16, "Bratislava")
++ wrap and unwrap for subroutines
++ calling a method on a Whatever star generates a closure
++ 1+*, *+1 and others generate closures (*-1 missing)
++ Associative, Positional and Callable are now parametric roles
++ typed arrays and hashes
++ parametric role subtyping (R[T1] ~~ R[T2] where T1 ~~ T2)
++ .invert and .push on Hashes
++ enforce return types of subroutines (partial implementation)
++ parallel testing
++ Configure.pl now supports passing options to parrot's Configure
++ support for lexical subroutines and multis
++ implemented \c[character name] in double quoted strings and regexes
++ implemented Perl 5 regexes
++ rx/.../ regex quoting
++ sockets support has been added (IO::Socket)
++ regex patterns may now be quantified by a separator regex
++ moved many methods to the setting
++ exporting and importing by tags, support :DEFAULT export tag
++ implemented START blocks
++ implemented roots builtin
++ implemented .ast on Match objects
++ added Match.caps and Match.chunks
++ split() now supports limits in all cases
++ prefix:<=> and the "fish operator" ( =<> ) are now gone
++ .readline is now .get
++ roles are now punned on any method call on the role
++ many other bug fixes
+
+New in 2009-03 release (#15, "Oslo")
++ implemented $*PROGRAM_NAME magical variable
++ outer lexicals are now visible in eval()
++ next, last etc. work in grep()
++ added R metaoperator
++ add an initial draft of Match.perl 
++ refactor Grammar and Match class hierarchy
++ fix if/unless/while/until/for/... on line after close curlies
++ add Q quoting, including Q:PIR
++ added "state" variables
++ //= fixed to short-circuit, and added short-circuiting &&= and ||=
++ multi-subs now have the Multi type and have a .candidates method
++ multi-method dispatch now looks up the class hierarchy
++ various fixes to using roles as type constraints
++ support bare sigils in signatures
++ more methods and functions moved to (Perl 6) setting
++ many other bug fixes
+
+New in 2009-02 release (#14, "Vienna")
++ first release independent of Parrot releases
++ passing 7076 spectests (+796 since 2009-01 release)
++ build and use fakecutable (perl6.exe) by default
++ redesigned build, configuration, and test subsystems
++ add settings/ directory for builtins written in Perl 6 (was "prelude")
++ improve diagnostics in Test.pm
++ allow anonymous classes via C<::>
++ re-use existing parameterized roles instead of creating new ones
++ roles now pun classes when .new is called on them
++ 'proto' now marks all same-named routines as 'multi'
++ XopX is now Xop
++ implement <-> (rw) pointy blocks
++ added min= and max= metaoperators
++ many many bugfixes
++ publish release schedule
++ documentation improvements

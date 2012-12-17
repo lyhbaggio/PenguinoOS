@@ -1,0 +1,17 @@
+*.c
+*.dump
+*.o
+*.obj
+*.so
+*.h
+*.bundle
+*.dll
+*.manifest
+*.exp
+*.ilk
+*.lib
+*.pdb
+*.opt
+*.dsp
+*.dsw
+objectref.pmc
