@@ -1,0 +1,36 @@
+Source code from the subversion repository
+------------------------------------------
+
+To compile source code obtained from the subversion repository,
+make sure you have installed the autoconf, automake and libtool packages.
+Execute
+$ autoreconf -i
+
+Required versions:
+* autoconf >= 2.61
+* automake >= 1.11.6
+* libtool >= 2.2
+
+Creating a new release
+----------------------
+
+1) Check the version number in configure.ac ("AC_INIT (mpc, _version_...)"),
+   INSTALL, src/get_version.c, src/mpc.h (remove suffix "dev" in
+   MPC_VERSION_STRING) and Makefile.vc.
+2) Verify that the ABI version in src/Makefile.am is correct.
+3) Check that NEWS, BUGS and TODO are up to date, and that the minimal
+   version numbers of gmp and mpfr in configure.ac, INSTALL and
+   doc/mpc.texi are correct.
+4) Execute "autoreconf; touch doc/mpc.texi; make distcheck".
+   This updates the date and version number in doc/version.texi and
+   creates the tarball for distribution.
+5) Upload to GNU ftp server.
+6) Update the web page on the server.
+   The html documentation is created with
+      makeinfo --html --no-split mpc.texi
+   and the resulting mpc.html is copied to content_html.php.
+7) Create an svn tag from inside the svn root:
+   svn cp trunk tags/VERSION
+8) After the release, update the version number in configure.ac, INSTALL,
+   src/get_version.c, src/mpc.h and Makefile.vc.
+9) Commit the changes to svn.
