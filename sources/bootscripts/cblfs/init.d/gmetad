@@ -1,0 +1,36 @@
+#!/bin/bash
+# Begin $rc_base/init.d/gmetad
+#
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Written by Andrew "Weibullguy" Rowland <darowland@ieee.org>
+#
+# Date: 2007-10-25
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+# Read in the command arguments
+case "$1" in
+    start)
+        boot_mesg "Starting Ganglia Meta-Monitoring Daemon..."
+        loadproc /usr/sbin/gmetad
+        ;;
+    stop)
+        boot_mesg "Stopping Gangia Meta-Monitoring Daemon..."
+        killproc gmetad
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        ;;
+    status)
+        statusproc /usr/sbin/gmetad
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+esac
+
+exit 0
+
+# End $rc_base/init.d/gmetad

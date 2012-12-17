@@ -1,0 +1,50 @@
+########################################################################
+# Begin /etc/sysconfig/i18n
+#
+# Description : i18n script config file
+#
+# Authors     : Jim Gifford
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
+
+# FONT specifies the default font that you'd like Linux to use on the
+# console.  You can find a good selection of fonts in /usr/share/consolefonts
+# To use the default console font, comment out the FONT setting below.
+#
+FONT="LatArCyrHeb-16"
+
+# CONSOLETRANSLATION is the charset map file to use.  Leave commented to use
+# the default one.  Have a look in /usr/share/consoletrans for a selection of
+# map files you can use.
+#
+#FONT_TRANSLATION="8859-1_to_uni"
+
+# Use KEYMAP to specify the default console keymap.  There is a complete tree
+# of keymaps in /usr/share/keymaps to choose from.
+#
+KEYMAP=us
+
+# Should we first load the 'windowkeys' console keymap?  Anyone using
+# a windows keyboard will select true. Everyone else select no.
+#
+WINDOWS_KEYBOARD=no
+
+# The maps to load for extended keyboards.  Most users will leave this as is.
+#
+#EXTENDED_KEYMAPS="backspace keypad euro"
+
+# Tell dumpkeys(1) to interpret character action codes to be
+# from the specified character set.
+# For a list of valid sets, run `dumpkeys --help`
+#
+DUMPKEYS_CHARSET=""
+
+# Use UNICODE
+#
+UNICODE=yes
+
+# End /etc/sysconfig/unicode

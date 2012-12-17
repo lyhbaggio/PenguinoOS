@@ -1,0 +1,45 @@
+#/bin/bash
+########################################################################
+# Begin $rc_base/init.d/syslog-ng
+#
+# Description : Syslog-ng Bootscript
+#
+# Authors     : Joe Ciccone <jciccone@gmail.com>
+#
+# Version     : 00.01
+#
+# Notes       :
+#
+########################################################################
+
+. /etc/sysconfig/rc
+. ${rc_functions}
+
+case "${1}" in
+	start)
+		boot_mesg "Starting Syslog-ng..."
+		loadproc /usr/sbin/syslog-ng
+		;;
+
+	stop)
+		boot_mesg "Stopping Syslog-ng..."
+		killproc /usr/sbin/syslog-ng
+		;;
+
+	restart)
+		${0} stop
+		sleep 1
+		${0} start
+		;;
+
+	status)
+		statusproc syslog-ng
+		;;
+
+	*)
+		echo "Usage: ${0} {start|stop|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/syslog-ng

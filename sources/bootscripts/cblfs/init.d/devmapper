@@ -1,0 +1,31 @@
+#!/bin/bash
+########################################################################
+# Begin $rc_base/init.d/devmapper
+#
+# Description : Creates device mapper nodes that may have been created in an
+#               early userspace.
+#
+# Authors     : Joe Ciccone <jciccone@gmail.com>
+#
+# Version     : 00.01
+#
+# Notes       :
+#
+########################################################################
+
+. /etc/sysconfig/rc
+. ${rc_functions}
+
+case "${1}" in
+	start)
+		boot_mesg "Running dmsetup mknodes..."
+		/sbin/dmsetup mknodes
+		evaluate_retval
+		;;
+	*)
+		echo "Usage: ${0} {start}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/devmapper

@@ -1,0 +1,114 @@
+#!/bin/bash
+#
+# Begin $rc_base/init.d/cluster
+#
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Written by Andrew "Weibullguy" Rowland <darowland@ieee.org>
+#
+# Date: 2007-10-31
+#
+# Starts all of the services required for the cluster.
+#
+#	PBS Server
+#	MOM Client
+#	Maui Scheduler
+#	Ganglia Monitor Daemon
+#	Ganglia Meta-Monitor Daemon
+#	MPICH2 Process Monitor
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+# Read in the command arguments
+case "$1" in
+
+    start)
+        echo "#-------------------------------------------#"
+        echo "Starting cluster services:"
+
+        # If the server daemon exists, then start it.
+        if [ -f /usr/sbin/pbs_server ]; then
+            boot_mesg "TORQUE PBS Server found; starting..."
+            loadproc /usr/sbin/pbs_server
+        fi
+
+        # If the mom daemon exists, then start it.
+        if [ -f /usr/sbin/pbs_mom ]; then
+            boot_mesg "TORQUE MOM Client found; starting..."
+            loadproc /usr/sbin/pbs_mom
+        fi
+
+        # If Maui Scheduler services exist on this node, then start it.
+        if [ -f /usr/sbin/maui ]; then
+            boot_mesg "Maui Batch scheduler found; starting..."
+            loadproc /usr/sbin/maui
+        fi
+
+        # If Ganglia monitor daemon exists, then start it.
+        if [ -f /usr/sbin/gmond ]; then
+            boot_mesg "Ganglia Monitoring Daemon found; starting..."
+            loadproc /usr/sbin/gmond
+        fi
+
+        # If Ganglia meta monitor daemon exists, start it.
+        if [ -f /usr/sbin/gmetad ]; then
+            boot_mesg "Ganglia Meta-Monitoring Daemon found; starting..."
+            loadproc /usr/sbin/gmetad
+        fi
+
+        # If MPICH2 process manager exists, then start it.
+        if [ -f /usr/sbin/mpd ]; then
+            boot_mesg "MPICH2 Process Manager found; starting..."
+            loadproc /usr/sbin/mpd
+        fi
+
+        echo "Cluster services running"
+        echo "#-------------------------------------------#"
+        ;;
+
+	stop)
+		echo "#-------------------------------------------#"
+        echo "Shutting down cluster services:"
+
+        boot_mesg "Stopping MPICH2 Process Monitor..."
+        killproc mpd
+        boot_mesg "Stopping Ganglia Meta-Monitoring Daemon..."
+        killproc gmetad
+        boot_mesg "Stopping Ganglia Monitoring Daemon..."
+        killproc gmond
+        boot_mesg "Stopping Maui Batch Scheduler..."
+        killproc maui
+        boot_mesg "Stopping TORQUE MOM Client ..."
+        killproc pbs_mom
+        boot_mesg "Stopping TORQUE PBS Server ..."
+        killproc pbs_server
+        echo "Cluster services stopped"
+        echo "#-------------------------------------------#"
+        ;;
+
+	restart)
+		$0 stop
+		$0 start
+		;;
+
+	status)
+		echo "#-------------------------------------------#"
+        echo "Status of cluster services:"
+        statusproc /usr/sbin/pbs_server
+        statusproc /usr/sbin/pbs_mom
+        statusproc /usr/sbin/maui
+        statusproc /usr/sbin/gmond
+        statusproc /usr/sbin/gmetad
+        statusproc /usr/sbin/mpd
+        echo "#-------------------------------------------#"
+        ;;
+
+	*)
+		echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+
+esac
+
+exit 0
+
+# End $rc_base/init.d/cluster

@@ -1,0 +1,36 @@
+#!/bin/bash
+# Begin $rc_base/init.d/mpd
+#
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Written by Andrew "Weibullguy" Rowland <darowland@ieee.org>
+#
+# Date: 2007-10-28
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+# Read in the command arguments
+case "$1" in
+    start)
+        boot_mesg "Starting MPICH2 Process Manager..."
+        loadproc /usr/sbin/mpd
+        ;;
+    stop)
+        boot_mesg "Stopping MPICH2 Process Manager ..."
+        killproc mpd
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        ;;
+    status)
+        statusproc /usr/sbin/mpd
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+esac
+
+exit 0
+
+# End $rc_base/init.d/mpd

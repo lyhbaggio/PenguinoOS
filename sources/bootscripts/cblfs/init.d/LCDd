@@ -1,0 +1,46 @@
+#!/bin/bash
+# Begin $rc_base/init.d/LCDd
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# ChangedBy: Steven Swann (sjs205) <swannonline@googlemail.com>
+# Date: Mon Dec 27 16:12:51 GMT 2010
+
+
+# Start or stop the LCDd server based upon the first argument to the script.
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case $1 in
+	start)
+		boot_mesg "Starting LCDd, the LCD server..."
+		loadproc /usr/sbin/LCDd
+		;;
+
+	stop)
+		boot_mesg "Stopping LCDd, the LCD server..."
+		killproc /usr/sbin/LCDd
+		;;
+
+	reload)
+		boot_mesg "Reloading LCDd, the LCD server..."
+		reloadproc /usr/sbin/LCDd
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc /usr/sbin/LCDd
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/LCDd

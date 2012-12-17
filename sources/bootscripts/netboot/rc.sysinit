@@ -1,0 +1,45 @@
+#!/bin/bash
+########################################################################
+# Begin /rc.sysinit
+#
+# Description : Modified Bootscript for NFSRoot booting
+#
+# Authors     : Jim Gifford - jim@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
+
+export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/tools/sbin
+
+echo -n "Mounting kernel-based file systems:"
+echo -n " proc"
+mount -n /proc
+echo -n " sys"
+mount -n /sys
+echo ""
+
+echo "Starting udev"
+mount -n -t tmpfs -o mode=0755 udev /dev
+cp --preserve=all --recursive --remove-destination  /lib/udev/devices/* /dev
+chmod 1777 /dev/shm
+echo "" > /sys/kernel/uevent_helper
+/sbin/udevd --daemon
+mkdir -p /dev/.udev/queue
+/sbin/udevadm trigger
+/sbin/udevadm settle
+
+echo "Remounting Root File System"
+mount -n -o remount,rw /
+
+echo "Creating mtab"
+> /etc/mtab
+mount -f /
+mount -f /proc
+mount -f /sys
+mount -a -O no_netdev
+
+echo "Setting System Clock"
+hwclock --hctosys --utc

@@ -1,0 +1,63 @@
+#!/bin/bash
+# Begin $network-devices/services/dhcpcd
+
+# Based upon lfs-bootscripts-1.12 $network_devices/if{down,up}
+# Rewritten by Nathan Coulson <nathan@linuxfromscratch.org>
+# Adapted for dhcpcd by DJ Lucas <dj@lucasit.com>
+
+. /etc/sysconfig/rc
+. $rc_functions
+. $IFCONFIG
+
+pidfile="/var/run/dhcpcd-$1.pid"
+
+case "$2" in
+	up)
+		boot_mesg -n "Starting DHCPCD on the $1 interface..."
+		# Test to see if there is a stale pid file
+		if [ -f "$pidfile" ]; then
+			ps `cat "$pidfile"` | grep dhcpcd > /dev/null
+			if [ $? != 0 ]; then
+				rm -f $pidfile > /dev/null
+			else
+				boot_mesg "dhcpcd already running!" ${WARNING}
+				echo_warning
+				exit 2
+			fi
+		fi
+		/sbin/dhcpcd $1 $DHCP_START
+		# Save the return value
+		RET="$?"
+		echo ""
+		$(exit "$RET")
+		evaluate_retval
+	;;
+
+	down)
+		boot_mesg -n "Stopping DHCPCD on the $1 interface..."
+		if [ -z "$DHCP_STOP" ]; then
+			echo ""
+			killproc -p "$pidfile" /sbin/dhcpcd
+		else
+			/sbin/dhcpcd $1 $DHCP_STOP &> /dev/null
+			RET="$?"
+			if [ "$RET" -eq 0 ]; then
+				echo ""
+				echo_ok
+			elif [ "$RET" -eq 1 ]; then
+				boot_mesg "dhcpcd not running!" ${WARNING}
+				echo_warning
+			else
+				echo ""
+				echo_failure
+			fi
+		fi
+	;;
+
+	*)
+		echo "Usage: $0 [interface] {up|down}"
+		exit 1
+	;;
+esac
+
+# End $network_devices/services/dhcpcd

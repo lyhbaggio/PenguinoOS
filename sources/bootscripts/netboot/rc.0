@@ -1,0 +1,33 @@
+#!/bin/bash
+########################################################################
+# Begin /rc.0
+#
+# Description : Modified Bootscript for NFSRoot booting
+#
+# Authors     : Jim Gifford - jim@linuxfromscratch.org
+#
+# Version     : 00.00
+#
+# Notes       :
+#
+########################################################################
+
+export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/tools/sbin
+
+echo "Sending all processes the TERM signal"
+killall5 -15
+
+echo "Sending all processes the KILL signal"
+killall5 -9
+
+echo "Syncing file systems"
+sync
+
+echo "Setting System Clock"
+hwclock --systohc --utc
+
+echo "Unmounting all other currently mounted file systems"
+umount -a -d -r &
+
+echo "Halting System"
+halt -d -f -i -p

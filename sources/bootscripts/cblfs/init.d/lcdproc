@@ -1,0 +1,46 @@
+#!/bin/bash
+# Begin $rc_base/init.d/lcdproc
+
+# Based on sysklogd script from LFS-3.1 and earlier.
+# ChangedBy: Steven Swann (sjs205) <swannonline@googlemail.com>
+# Date: Mon Dec 27 16:12:51 GMT 2010
+
+
+# Start or stop the lcdproc client based upon the first argument to the script.
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+case $1 in
+	start)
+		boot_mesg "Starting lcdproc, the LCD client..."
+		loadproc /usr/bin/lcdproc
+		;;
+
+	stop)
+		boot_mesg "Stopping lcdproc, the LCD client..."
+		killproc /usr/bin/lcdproc
+		;;
+
+	reload)
+		boot_mesg "Reloading lcdproc, the LCD client..."
+		reloadproc /usr/bin/lcdproc
+		;;
+
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+
+	status)
+		statusproc /usr/bin/lcdproc
+		;;
+
+	*)
+		echo "Usage: $0 {start|stop|reload|restart|status}"
+		exit 1
+		;;
+esac
+
+# End $rc_base/init.d/lcdproc

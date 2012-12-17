@@ -1,0 +1,36 @@
+#!/bin/bash
+# Begin $rc_base/init.d/pbsserver
+#
+# Based on sysklogd script from LFS-3.1 and earlier.
+# Written by Andrew "Weibullguy" Rowland <darowland@ieee.org>
+#
+# Date: 2007-10-21
+
+. /etc/sysconfig/rc
+. $rc_functions
+
+# Read in the command arguments
+case "$1" in
+    start)
+        boot_mesg "Starting TORQUE PBS Server..."
+        loadproc /usr/sbin/pbs_server
+		;;
+    stop)
+	    boot_mesg "Stopping TORQUE PBS Server ..."
+        killproc pbs_server
+        ;;
+    restart)
+        $0 stop
+        $0 start
+        ;;
+    status)
+        statusproc /usr/sbin/pbs_server
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|status}"
+        exit 1
+esac
+
+exit 0
+
+# End $rc_base/init.d/pbsserver
