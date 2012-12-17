@@ -1,0 +1,7 @@
+/.cvsignore////*////
+/ChangeLog////*////
+/Makefile.sub////*////
+/TODO////*////
+/groff_hdtbl.man////*////
+/hdmisc.tmac////*////
+/hdtbl.tmac////*////

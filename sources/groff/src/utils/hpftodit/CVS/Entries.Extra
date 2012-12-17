@@ -1,0 +1,5 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/hpftodit.cpp////*////
+/hpftodit.man////*////
+/hpuni.cpp////*////

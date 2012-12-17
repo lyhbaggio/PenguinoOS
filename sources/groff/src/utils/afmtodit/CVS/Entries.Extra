@@ -1,0 +1,6 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/afmtodit.man////*////
+/afmtodit.pl////*////
+/afmtodit.tables////*////
+/make-afmtodit-tables////*////

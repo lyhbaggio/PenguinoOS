@@ -1,0 +1,10 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/ditroff.man////*////
+/groff.man////*////
+/groff_char.man////*////
+/groff_diff.man////*////
+/groff_font.man////*////
+/groff_out.man////*////
+/groff_tmac.man////*////
+/roff.man////*////

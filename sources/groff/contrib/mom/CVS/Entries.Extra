@@ -1,0 +1,10 @@
+/.cvsignore////*////
+/BUGS////*////
+/ChangeLog////*////
+/Makefile.sub////*////
+/NEWS////*////
+/TODO////*////
+/copyright////*////
+/groff_mom.man////*////
+/mom.tmac////*////
+/om.tmac////*////

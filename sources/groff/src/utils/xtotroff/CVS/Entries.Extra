@@ -1,0 +1,5 @@
+/.cvsignore////*////
+/Makefile.in////*////
+/Makefile.sub////*////
+/xtotroff.c////*////
+/xtotroff.man////*////

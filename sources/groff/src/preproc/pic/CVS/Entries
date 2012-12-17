@@ -1,0 +1,18 @@
+/.cvsignore/1.4/Tue Apr 15 15:13:48 2003//
+/Makefile.sub/1.6/Tue Apr 15 15:13:48 2003//
+/TODO/1.2/Thu Jul 10 04:41:42 2003//
+/common.cpp/1.8/Mon Jan  5 20:11:08 2009//
+/common.h/1.8/Mon Jan  5 20:11:08 2009//
+/lex.cpp/1.8/Mon Jan  5 20:11:08 2009//
+/main.cpp/1.8/Wed Feb  8 18:54:31 2012//
+/object.cpp/1.12/Tue Sep  1 05:26:32 2009//
+/object.h/1.8/Mon Jan  5 20:11:08 2009//
+/output.h/1.7/Mon Jan  5 20:11:08 2009//
+/pic.h/1.10/Mon Jan  5 20:11:09 2009//
+/pic.man/1.23/Tue Jul 26 17:11:11 2011//
+/pic.y/1.26/Tue Jun 16 21:08:25 2009//
+/position.h/1.4/Mon Jan  5 20:11:09 2009//
+/tex.cpp/1.9/Mon Jan  5 20:11:09 2009//
+/text.h/1.4/Mon Jan  5 20:11:09 2009//
+/troff.cpp/1.9/Sat Jan  2 17:22:55 2010//
+D

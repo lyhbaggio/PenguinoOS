@@ -1,0 +1,12 @@
+/.cvsignore////*////
+/ChangeLog////*////
+/Makefile.sub////*////
+/PROBLEMS////*////
+/README////*////
+/TODO////*////
+/cover.ms////*////
+/pdfmark.ms////*////
+/pdfmark.tmac////*////
+/pdfroff.man////*////
+/pdfroff.sh////*////
+/spdf.tmac////*////

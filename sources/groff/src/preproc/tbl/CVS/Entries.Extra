@@ -1,0 +1,6 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/main.cpp////*////
+/table.cpp////*////
+/table.h////*////
+/tbl.man////*////

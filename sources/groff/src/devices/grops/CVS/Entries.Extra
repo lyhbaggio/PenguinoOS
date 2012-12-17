@@ -1,0 +1,8 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/TODO////*////
+/grops.man////*////
+/ps.cpp////*////
+/ps.h////*////
+/psfig.diff////*////
+/psrm.cpp////*////

@@ -1,0 +1,6 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/groff.cpp////*////
+/groff.man////*////
+/pipeline.c////*////
+/pipeline.h////*////

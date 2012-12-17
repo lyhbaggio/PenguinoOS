@@ -1,0 +1,7 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/common.cpp////*////
+/index.cpp////*////
+/linear.cpp////*////
+/map.c////*////
+/search.cpp////*////

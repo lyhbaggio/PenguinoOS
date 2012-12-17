@@ -1,0 +1,4 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/dvi.cpp////*////
+/grodvi.man////*////

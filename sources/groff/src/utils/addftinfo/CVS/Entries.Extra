@@ -1,0 +1,6 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/addftinfo.cpp////*////
+/addftinfo.man////*////
+/guess.cpp////*////
+/guess.h////*////

@@ -1,0 +1,16 @@
+/.cvsignore////*////
+/Makefile.in////*////
+/Makefile.sub////*////
+/fdl.texi////*////
+/fixinfo.sh////*////
+/gnu.xpm////*////
+/grnexmpl.g////*////
+/grnexmpl.me////*////
+/groff.css////*////
+/groff.texinfo////*////
+/meintro.me////*////
+/meref.me////*////
+/pic.ms////*////
+/texinfo.tex////*////
+/txi-en.tex////*////
+/webpage.ms////*////

@@ -1,0 +1,5 @@
+/.cvsignore////*////
+/DviChar.c////*////
+/Makefile.sub////*////
+/XFontName.c////*////
+/xmalloc.c////*////

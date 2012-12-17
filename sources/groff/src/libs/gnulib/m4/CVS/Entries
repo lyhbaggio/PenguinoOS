@@ -1,0 +1,27 @@
+/.cvsignore/1.1/Mon Feb 20 09:00:59 2012//
+/00gnulib.m4/1.2/Mon Feb 20 08:59:36 2012//
+/Makefile.am/1.1/Mon Dec 13 17:42:29 2010//
+/Makefile.in/1.2/Mon Feb 20 08:59:36 2012//
+/codeset.m4/1.2/Mon Feb 20 08:59:36 2012//
+/extensions.m4/1.2/Mon Feb 20 08:59:36 2012//
+/fcntl-o.m4/1.2/Mon Feb 20 08:59:36 2012//
+/glibc21.m4/1.2/Mon Feb 20 08:59:37 2012//
+/gnulib-cache.m4/1.2/Mon Feb 20 08:59:37 2012//
+/gnulib-common.m4/1.2/Mon Feb 20 08:59:37 2012//
+/gnulib-comp.m4/1.2/Mon Feb 20 08:59:37 2012//
+/gnulib-tool.m4/1.2/Mon Feb 20 08:59:37 2012//
+/include_next.m4/1.2/Mon Feb 20 08:59:37 2012//
+/libunistring-base.m4/1.2/Mon Feb 20 08:59:37 2012//
+/localcharset.m4/1.2/Mon Feb 20 08:59:37 2012//
+/longlong.m4/1.2/Mon Feb 20 08:59:38 2012//
+/multiarch.m4/1.2/Mon Feb 20 08:59:38 2012//
+/onceonly.m4/1.2/Mon Feb 20 08:59:38 2012//
+/stddef_h.m4/1.2/Mon Feb 20 08:59:39 2012//
+/stdint.m4/1.2/Mon Feb 20 08:59:39 2012//
+/warn-on-use.m4/1.2/Mon Feb 20 08:59:39 2012//
+/wchar_h.m4/1.2/Mon Feb 20 08:59:39 2012//
+/wchar_t.m4/1.2/Mon Feb 20 08:59:39 2012//
+/wctype_h.m4/1.2/Mon Feb 20 08:59:39 2012//
+/wcwidth.m4/1.2/Mon Feb 20 08:59:39 2012//
+/wint_t.m4/1.2/Mon Feb 20 08:59:39 2012//
+D

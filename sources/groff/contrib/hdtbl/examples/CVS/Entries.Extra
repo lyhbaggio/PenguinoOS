@@ -1,0 +1,13 @@
+/.cvsignore////*////
+/chess_board.roff////*////
+/col_rowspan_colors.roff////*////
+/color_boxes.roff////*////
+/color_nested_tables.roff////*////
+/color_table_cells.roff////*////
+/color_transitions.roff////*////
+/common.roff////*////
+/fonts_n.in////*////
+/fonts_x.in////*////
+/mixed_pickles.roff////*////
+/rainbow.roff////*////
+/short_reference.roff////*////

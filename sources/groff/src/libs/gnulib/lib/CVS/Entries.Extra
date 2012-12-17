@@ -1,0 +1,15 @@
+/Makefile.am////*////
+/Makefile.in////*////
+/config.charset////*////
+/localcharset.c////*////
+/localcharset.h////*////
+/ref-add.sin////*////
+/ref-del.sin////*////
+/stddef.in.h////*////
+/stdint.in.h////*////
+/streq.h////*////
+/unitypes.in.h////*////
+/uniwidth.in.h////*////
+/wchar.in.h////*////
+/wctype.in.h////*////
+/wcwidth.c////*////

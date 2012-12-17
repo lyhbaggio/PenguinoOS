@@ -1,0 +1,9 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/README////*////
+/gprint.h////*////
+/grn.man////*////
+/hdb.cpp////*////
+/hgraph.cpp////*////
+/hpoint.cpp////*////
+/main.cpp////*////

@@ -1,0 +1,6 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/charset.h////*////
+/grolbp.man////*////
+/lbp.cpp////*////
+/lbp.h////*////

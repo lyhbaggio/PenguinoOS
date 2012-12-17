@@ -1,0 +1,5 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/TODO////*////
+/grotty.man////*////
+/tty.cpp////*////

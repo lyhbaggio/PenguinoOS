@@ -1,0 +1,6 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/eign////*////
+/indxbib.cpp////*////
+/indxbib.man////*////
+/signal.c////*////

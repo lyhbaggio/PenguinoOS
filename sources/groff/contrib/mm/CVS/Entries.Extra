@@ -1,0 +1,15 @@
+/.cvsignore////*////
+/ChangeLog////*////
+/Makefile.sim////*////
+/Makefile.sub////*////
+/NOTES////*////
+/README////*////
+/groff_mm.man////*////
+/groff_mmse.man////*////
+/m.tmac////*////
+/mm.tmac////*////
+/mmroff.man////*////
+/mmroff.pl////*////
+/mmse.tmac////*////
+/mse.tmac////*////
+/refer-mm.tmac////*////

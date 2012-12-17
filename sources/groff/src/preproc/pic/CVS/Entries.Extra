@@ -1,0 +1,17 @@
+/.cvsignore////*////
+/Makefile.sub////*////
+/TODO////*////
+/common.cpp////*////
+/common.h////*////
+/lex.cpp////*////
+/main.cpp////*////
+/object.cpp////*////
+/object.h////*////
+/output.h////*////
+/pic.h////*////
+/pic.man////*////
+/pic.y////*////
+/position.h////*////
+/tex.cpp////*////
+/text.h////*////
+/troff.cpp////*////
