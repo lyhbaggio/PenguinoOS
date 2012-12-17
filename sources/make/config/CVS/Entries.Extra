@@ -1,0 +1,4 @@
+/.cvsignore////*////
+/ChangeLog////*////
+/Makefile.am////*////
+/dospaths.m4////*////

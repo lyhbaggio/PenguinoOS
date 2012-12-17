@@ -1,0 +1,10 @@
+/.cvsignore////*////
+/COPYING////*////
+/ChangeLog////*////
+/NEWS////*////
+/README////*////
+/guile.supp////*////
+/mkshadow////*////
+/run_make_tests////*////
+/run_make_tests.pl////*////
+/test_driver.pl////*////

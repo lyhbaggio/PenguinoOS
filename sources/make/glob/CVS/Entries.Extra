@@ -1,0 +1,12 @@
+/.cvsignore////*////
+/COPYING.LIB////*////
+/ChangeLog////*////
+/Makefile.am////*////
+/Makefile.ami////*////
+/SCOPTIONS////*////
+/SMakefile////*////
+/configure.bat////*////
+/fnmatch.c////*////
+/fnmatch.h////*////
+/glob.c////*////
+/glob.h////*////
