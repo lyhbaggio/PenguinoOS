@@ -1,0 +1,8 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/templates.texi////*////
+/testkb.texi////*////
+/tests-parser.txt////*////
+/tests.txt////*////
+/verbatim_html.texi////*////
+/viper.texi////*////

@@ -1,0 +1,14 @@
+/anchor_in_caption.pl////*////
+/cindex_in_caption.pl////*////
+/comment_space_comand_in_float.pl////*////
+/complex_float.pl////*////
+/empty_listoffloats.pl////*////
+/empty_listoffloats_with_floats.pl////*////
+/float_copying.pl////*////
+/float_with_at_commands.pl////*////
+/footnote_in_caption.pl////*////
+/footnote_in_caption_and_error.pl////*////
+/listoffloats_with_commands.pl////*////
+/numbering_captions_listoffloats.pl////*////
+/ref_to_float.pl////*////
+/simple.pl////*////

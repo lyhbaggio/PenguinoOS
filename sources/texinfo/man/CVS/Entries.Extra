@@ -1,0 +1,8 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/ginfo.h2m////*////
+/info.5////*////
+/pdftexi2dvi.1////*////
+/texi2any.1////*////
+/texi2pdf.1////*////
+/texinfo.5////*////

@@ -1,0 +1,17 @@
+/empty_item_tab.pl////*////
+/empty_multitable_with_cells.pl////*////
+/inter_item_commands_in_multitable.pl////*////
+/multitable_begin_with_tab.pl////*////
+/multitable_in_example.pl////*////
+/multitable_not_closed.pl////*////
+/multitable_not_closed_item.pl////*////
+/multitable_not_closed_item_tab.pl////*////
+/multitable_one_column_too_much_cells.pl////*////
+/multitable_two_columns_too_much_cells.pl////*////
+/multitable_with_empty_item_tab.pl////*////
+/not_letters_in_prototype.pl////*////
+/paragraph_in_cells.pl////*////
+/prototype_brace_no_brace.pl////*////
+/prototype_brace_no_brace_comment.pl////*////
+/prototype_no_brace.pl////*////
+/w_in_multitable.pl////*////

@@ -1,0 +1,10 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/block_EOL.texi////*////
+/math_not_closed.texi////*////
+/tests-parser.txt////*////
+/tex.texi////*////
+/tex_accents.texi////*////
+/tex_complex.texi////*////
+/tex_in_copying.texi////*////
+/tex_not_closed.texi////*////

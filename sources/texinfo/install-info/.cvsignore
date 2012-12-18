@@ -1,0 +1,7 @@
+*.log
+*.trs
+.deps
+Makefile
+Makefile.in
+ginstall-info
+install-info

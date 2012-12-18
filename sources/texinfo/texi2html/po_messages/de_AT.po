@@ -1,0 +1,1090 @@
+# German/autrian messages for GNU Texinfo
+# Copyright © 1999 Free Software Foundation, Inc.
+# Karl Eichwalder <ke@suse.de>, 1999.
+#
+# 1999-02-16 21:11:38 MET
+# Vorgeschlagen von Guido Flohr <gufl0000@stud.uni-sb.de>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: texinfo 3.12d\n"
+"Report-Msgid-Bugs-To: bug-texinfo@gnu.org\n"
+"POT-Creation-Date: 2011-09-25 20:41+0200\n"
+"PO-Revision-Date: 1999-02-16 21:14+01:00\n"
+"Last-Translator: Karl Eichwalder <ke@suse.de>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de_AT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: texi2html/texi2html.pl:2392
+#, perl-format
+msgid "Try `%s --help' for more information.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:2495
+#, perl-format
+msgid "%s is not a valid language code"
+msgstr ""
+
+#: texi2html/texi2html.pl:2499
+#, perl-format
+msgid "%s is not a valid region code"
+msgstr ""
+
+#: texi2html/texi2html.pl:2569
+#, perl-format
+msgid "%s: --footnote-style arg must be `separate' or `end', not `%s'.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:2574
+#, perl-format
+msgid "@%s arg must be `separate' or `end', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:2625
+#, perl-format
+msgid "%s: --paragraph-indent arg must be numeric/`none'/`asis', not `%s'.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:2629
+#, perl-format
+msgid "@paragraphindent arg must be numeric/`none'/`asis', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:2649
+#, perl-format
+msgid "unrecognized encoding name `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:2666
+#, perl-format
+msgid "Encoding %s certainly poorly supported"
+msgstr ""
+
+#: texi2html/texi2html.pl:2790 texi2html/texi2html.pl:2794
+msgid "translation"
+msgstr ""
+
+#: texi2html/texi2html.pl:3828
+#, perl-format
+msgid "Usage: %s [OPTION]... TEXINFO-FILE...\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3830
+msgid ""
+"Translate Texinfo source documentation to various other formats, by default\n"
+"Info files suitable for reading online with Emacs or standalone GNU Info.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3833
+#, perl-format
+msgid ""
+"General options:\n"
+"      --error-limit=NUM       quit after NUM errors (default %d).\n"
+"      --document-language=STR locale to use in translating Texinfo keywords\n"
+"                                for the output document (default C).\n"
+"      --force                 preserve output even if errors.\n"
+"      --help                  display this help and exit.\n"
+"      --no-validate           suppress node cross-reference validation.\n"
+"      --no-warn               suppress warnings (but not errors).\n"
+"      --conf-dir=DIR          search also for initialization files in DIR.\n"
+"      --init-file=FILE        load FILE to modify the default behaviour.\n"
+"      --set-init-variable VAR=VAL  set configuration variable VAR to VAL.\n"
+"  -v, --verbose               explain what is being done.\n"
+"      --version               display version information and exit.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3847
+msgid ""
+"Output format selection (default is to produce Info):\n"
+"      --docbook               output Docbook XML rather than Info.\n"
+"      --html                  output HTML rather than Info.\n"
+"      --xml                   output Texinfo XML rather than Info.\n"
+"      --plaintext             output plain text rather than Info.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3853
+msgid ""
+"General output options:\n"
+"  -E, --macro-expand=FILE     output macro-expanded source to FILE,\n"
+"                                ignoring any @setfilename.\n"
+"      --no-headers            suppress node separators, Node: lines, and "
+"menus\n"
+"                                from Info output (thus producing plain "
+"text)\n"
+"                                or from HTML (thus producing shorter "
+"output);\n"
+"                                also, write to standard output by default "
+"if\n"
+"                                producing Info.\n"
+"      --split=SPLIT           split at SPLIT, where SPLIT may be chapter, \n"
+"                                section or node if output supports "
+"splitting.\n"
+"      --no-split              suppress the splitting of Info or HTML "
+"output,\n"
+"                                generate only one output file.\n"
+"      --number-sections       output chapter and sectioning numbers.\n"
+"  -o, --output=FILE           output to FILE (or directory if split).\n"
+"                                If not split and FILE is a directory, put "
+"the\n"
+"                                resulting files in FILE.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3870
+#, perl-format
+msgid ""
+"Options for Info and plain text:\n"
+"      --disable-encoding      do not output accented and special characters\n"
+"                                in Info output based on @documentencoding.\n"
+"      --enable-encoding       override --disable-encoding (default).\n"
+"      --fill-column=NUM       break Info lines at NUM characters (default "
+"%d).\n"
+"      --footnote-style=STYLE  output footnotes in Info according to STYLE:\n"
+"                                `separate' to put them in their own node;\n"
+"                                `end' to put them at the end of the node, "
+"in\n"
+"                                which they are defined (this is the "
+"default).\n"
+"      --paragraph-indent=VAL  indent Info paragraphs by VAL spaces (default "
+"%d).\n"
+"                                If VAL is `none', do not indent; if VAL is\n"
+"                                `asis', preserve existing indentation.\n"
+"      --split-size=NUM        split Info files at size NUM (default %d).\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3885
+msgid ""
+"Options for HTML:\n"
+"      --css-include=FILE      include FILE in HTML <style> output;\n"
+"                                read stdin if FILE is -.\n"
+"      --css-ref=URL           generate reference to a CSS file.\n"
+"      --internal-links=FILE   produce list of internal links in FILE.\n"
+"      --transliterate-file-names\n"
+"                              produce file names in ASCII transliteration.\n"
+"      --node-files            produce redirection files for nodes and \n"
+"                                anchors. Default is set only if split.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3895
+msgid ""
+"Options for XML and Docbook:\n"
+"      --output-indent=VAL     does nothing, retained for compatibility.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3905
+msgid ""
+"Input file options:\n"
+"      --commands-in-node-names  does nothing, retained for compatibility.\n"
+"  -D VAR                        define the variable VAR, as with @set.\n"
+"  -I DIR                        append DIR to the @include search path.\n"
+"  -P DIR                        prepend DIR to the @include search path.\n"
+"  -U VAR                        undefine the variable VAR, as with @clear.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3912
+msgid ""
+"Conditional processing in input:\n"
+"  --ifdocbook       process @ifdocbook and @docbook even if\n"
+"                      not generating Docbook.\n"
+"  --ifhtml          process @ifhtml and @html even if not generating HTML.\n"
+"  --ifinfo          process @ifinfo even if not generating Info.\n"
+"  --ifplaintext     process @ifplaintext even if not generating plain text.\n"
+"  --iftex           process @iftex and @tex; implies --no-split.\n"
+"  --ifxml           process @ifxml and @xml.\n"
+"  --no-ifdocbook    do not process @ifdocbook and @docbook text.\n"
+"  --no-ifhtml       do not process @ifhtml and @html text.\n"
+"  --no-ifinfo       do not process @ifinfo text.\n"
+"  --no-ifplaintext  do not process @ifplaintext text.\n"
+"  --no-iftex        do not process @iftex and @tex text.\n"
+"  --no-ifxml        do not process @ifxml and @xml text.\n"
+"\n"
+"  Also, for the --no-ifFORMAT options, do process @ifnotFORMAT text.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3929
+msgid ""
+"  The defaults for the @if... conditionals depend on the output format:\n"
+"  if generating HTML, --ifhtml is on and the others are off;\n"
+"  if generating Info, --ifinfo is on and the others are off;\n"
+"  if generating plain text, --ifplaintext is on and the others are off;\n"
+"  if generating XML, --ifxml is on and the others are off.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3935
+msgid ""
+"Examples:\n"
+"  makeinfo foo.texi                      write Info to foo's @setfilename\n"
+"  makeinfo --html foo.texi               write HTML to @setfilename\n"
+"  makeinfo --xml foo.texi                write Texinfo XML to @setfilename\n"
+"  makeinfo --docbook foo.texi            write DocBook XML to @setfilename\n"
+"  makeinfo --no-headers foo.texi         write plain text to standard "
+"output\n"
+"\n"
+"  makeinfo --html --no-headers foo.texi  write html without node lines, "
+"menus\n"
+"  makeinfo --number-sections foo.texi    write Info with numbered sections\n"
+"  makeinfo --no-split foo.texi           write one Info file however big\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:3946
+msgid ""
+"Email bug reports to bug-texinfo@gnu.org,\n"
+"general questions and discussion to help-texinfo@gnu.org.\n"
+"Texinfo home page: http://www.gnu.org/software/texinfo/"
+msgstr ""
+
+#: texi2html/texi2html.pl:4026
+#, perl-format
+msgid ""
+"Copyright (C) %s Free Software Foundation, Inc.\n"
+"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
+"html>\n"
+"This is free software: you are free to change and redistribute it.\n"
+"There is NO WARRANTY, to the extent permitted by law.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:4056
+#, perl-format
+msgid "%s: Ignoring unrecognized TEXINFO_OUTPUT_FORMAT value `%s'.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:4090
+#, perl-format
+msgid "when generating %s, only one input FILE may be specified with -o"
+msgstr ""
+
+#: texi2html/texi2html.pl:4499
+msgid "Missing type"
+msgstr ""
+
+#: texi2html/texi2html.pl:4504
+#, perl-format
+msgid "Unrecognized type: %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:4578
+#, perl-format
+msgid "Ignoring splitting for format %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:4674
+#, perl-format
+msgid "Cannot split output %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:4749
+#, perl-format
+msgid "Can't create directories `%s' or `%s': %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:4755
+#, perl-format
+msgid "Can't create directory `%s': %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:4774
+msgid "current directory not writable"
+msgstr ""
+
+#: texi2html/texi2html.pl:4778
+#, perl-format
+msgid "%s not writable"
+msgstr ""
+
+#: texi2html/texi2html.pl:5126
+msgid " end of file"
+msgstr ""
+
+#: texi2html/texi2html.pl:5491
+msgid "Superfluous arguments for node"
+msgstr ""
+
+#: texi2html/texi2html.pl:5499
+#, perl-format
+msgid "Node `%s' previously defined %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:5504 texi2html/texi2html.pl:13289
+#: texi2html/texi2html.pl:13794
+#, perl-format
+msgid "Syntax for an external node used for `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5630
+#, perl-format
+msgid "@%s requires an argument"
+msgstr ""
+
+#: texi2html/texi2html.pl:5721 texi2html/texi2html.pl:15854
+#, perl-format
+msgid "Expected @end %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:5770
+#, perl-format
+msgid "Translations for `%s' not found. Reverting to `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5802 texi2html/texi2html.pl:5813
+#: texi2html/texi2html.pl:10386
+#, perl-format
+msgid "%c%s requires a name"
+msgstr ""
+
+#: texi2html/texi2html.pl:5825
+#, perl-format
+msgid "@%s should only accept a @-command as argument, not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5863
+#, perl-format
+msgid "@firstparagraphindent arg must be `none' or `insert', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5878
+#, perl-format
+msgid "@exampleindent arg must be numeric/`asis', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5889
+#, perl-format
+msgid "Expected @%s on or off, not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5900
+#, perl-format
+msgid "@kbdinputstyle arg must be `code'/`example'/`distinct', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5924
+#, perl-format
+msgid "@allowcodebreaks arg must be `true' or `false', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:5942 texi2html/texi2html.pl:6160
+#: texi2html/texi2html.pl:6188 texi2html/texi2html.pl:6253
+#: texi2html/texi2html.pl:6417 texi2html/texi2html.pl:13222
+#: texi2html/texi2html.pl:14620
+#, perl-format
+msgid "Bad argument to @%s: %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:5973
+#, perl-format
+msgid "Encoding %s is not a canonical texinfo encoding"
+msgstr ""
+
+#: texi2html/texi2html.pl:5992
+#, perl-format
+msgid "@%s arg must be an encoding"
+msgstr ""
+
+#: texi2html/texi2html.pl:6003 texi2html/texi2html.pl:6014
+#, perl-format
+msgid "Bad argument to @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:6133
+#, perl-format
+msgid "Unknown from index `%s' in @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:6135
+#, perl-format
+msgid "Unknown to index name `%s' in @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:6170
+#, perl-format
+msgid "Reserved index name %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:6200
+#, perl-format
+msgid "@%s arg must be `top' or `bottom', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:6211
+#, perl-format
+msgid "Only @%s 10 or 11 is supported, not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:6241
+#, perl-format
+msgid "@%s arg must be `on', `off' or `odd', not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:6301
+#, perl-format
+msgid "@%s not meaningful outside `@titlepage' and `@quotation' environments"
+msgstr ""
+
+#: texi2html/texi2html.pl:6369
+#, perl-format
+msgid "@sp requires a positive numeric argument, not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:6389 texi2html/texi2html.pl:16980
+#, perl-format
+msgid "Cannot read %s: %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:6412 texi2html/texi2html.pl:13217
+#, perl-format
+msgid "@%s: Cannot find %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:6592
+#, perl-format
+msgid "Empty node name after expansion `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:7225
+#, perl-format
+msgid "%s reference to nonexistent `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:7296
+#, perl-format
+msgid "unreferenced node `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:7350
+#, perl-format
+msgid "Node `%s' lacks menu item for `%s' despite being its Up target"
+msgstr ""
+
+#: texi2html/texi2html.pl:7368
+#, perl-format
+msgid "For `%s', up in menu `%s' and up `%s' don't match"
+msgstr ""
+
+#: texi2html/texi2html.pl:7421
+#, perl-format
+msgid "No node following `%s' in menu, but `%s' follows in sectioning"
+msgstr ""
+
+#: texi2html/texi2html.pl:7422
+#, perl-format
+msgid "Node following `%s' in menu `%s' and in sectioning `%s' differ"
+msgstr ""
+
+#: texi2html/texi2html.pl:8457
+#, perl-format
+msgid "Unknown index `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:8462 texi2html/formats/info.pm:3075
+#, perl-format
+msgid "Entry for index `%s' outside of any node"
+msgstr ""
+
+#: texi2html/texi2html.pl:8925
+#, perl-format
+msgid "@%s after the first element"
+msgstr ""
+
+#: texi2html/texi2html.pl:9391
+#, perl-format
+msgid "File empty for renamed node `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:9395
+#, perl-format
+msgid "Node to be renamed as, `%s' not found"
+msgstr ""
+
+#: texi2html/texi2html.pl:9399
+#, perl-format
+msgid "Node `%s' that is to be renamed exists "
+msgstr ""
+
+#: texi2html/texi2html.pl:9599
+#, perl-format
+msgid "%s: Removing output file `%s' due to errors; use --force to preserve.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:9603
+#, perl-format
+msgid "%s: Removing output files due to errors; use --force to preserve.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:9650
+msgid "Too many errors!  Gave up.\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:9742
+#, perl-format
+msgid "%s:%d: warning: %s (possibly involving @%s)\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:9746
+#, perl-format
+msgid "%s:%d: warning: %s\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:9779
+#, perl-format
+msgid "(in %s l. %d possibly involving @%s)"
+msgstr ""
+
+#: texi2html/texi2html.pl:9783
+#, perl-format
+msgid "(l. %d possibly involving @%s)"
+msgstr ""
+
+#: texi2html/texi2html.pl:9788
+#, perl-format
+msgid "(in %s l. %d)"
+msgstr ""
+
+#: texi2html/texi2html.pl:9792
+#, perl-format
+msgid "(l. %d)"
+msgstr ""
+
+#: texi2html/texi2html.pl:9949
+#, perl-format
+msgid "Too much '}' in @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:9959
+#, perl-format
+msgid "Missing `}' on @%s line"
+msgstr ""
+
+#: texi2html/texi2html.pl:10109
+#, perl-format
+msgid "Anchor `%s' ignored in %s expanded more than once"
+msgstr ""
+
+#: texi2html/texi2html.pl:10460
+#, perl-format
+msgid "Region %s inside region %s is not allowed"
+msgstr ""
+
+#: texi2html/texi2html.pl:10739
+#, perl-format
+msgid "column fraction not a number: %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:10760
+#, perl-format
+msgid "ignoring stray text `%s' after @multitable"
+msgstr ""
+
+#: texi2html/texi2html.pl:10782
+#, perl-format
+msgid "Too many %s closed"
+msgstr ""
+
+#: texi2html/texi2html.pl:10847 texi2html/texi2html.pl:10874
+#: texi2html/texi2html.pl:14483
+#, perl-format
+msgid "`@end' expected `%s', but saw `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:10852 texi2html/formats/info.pm:899
+#, perl-format
+msgid "@%s has text but no @item"
+msgstr ""
+
+#: texi2html/texi2html.pl:11012
+#, perl-format
+msgid "Unknown format %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:11036
+#, perl-format
+msgid "mismatched @end %s with @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:11169
+#, perl-format
+msgid "Must be in `@%s' environment to use `@%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:11228 texi2html/texi2html.pl:11666
+#, perl-format
+msgid "@%s (argument nr %d)"
+msgstr ""
+
+#: texi2html/texi2html.pl:11309
+#, perl-format
+msgid "%s requires an argument: the formatter for %citem"
+msgstr ""
+
+#: texi2html/texi2html.pl:11312
+#, perl-format
+msgid "prepended for @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:11328
+msgid "empty multitable"
+msgstr ""
+
+#: texi2html/texi2html.pl:11338
+#, perl-format
+msgid "@columnfraction (argument nr %d)"
+msgstr ""
+
+#: texi2html/texi2html.pl:11526 texi2html/texi2html.pl:11540
+msgid "node name in menu"
+msgstr ""
+
+#: texi2html/texi2html.pl:11527
+msgid "normalized node name in menu"
+msgstr ""
+
+#: texi2html/texi2html.pl:11533
+msgid "menu entry name"
+msgstr ""
+
+#: texi2html/texi2html.pl:11568
+#, perl-format
+msgid "Menu reference to nonexistent node `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:11642
+#, perl-format
+msgid "First argument to @%s may not be empty"
+msgstr ""
+
+#: texi2html/texi2html.pl:11779
+#, perl-format
+msgid "@%s not in text (in anchor, node, section...)"
+msgstr ""
+
+#: texi2html/texi2html.pl:11791 texi2html/texi2html.pl:14562
+msgid "@listoffloats @float type"
+msgstr ""
+
+#: texi2html/texi2html.pl:11810
+#, perl-format
+msgid "@%s reference to nonexistent node `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:11893
+#, perl-format
+msgid "@%s not meaningful outside `@float' environment"
+msgstr ""
+
+#: texi2html/texi2html.pl:11951
+msgid "@float style"
+msgstr ""
+
+#: texi2html/texi2html.pl:12083 texi2html/texi2html.pl:12084
+msgid "@image base name"
+msgstr ""
+
+#: texi2html/texi2html.pl:12093 texi2html/texi2html.pl:12094
+msgid "@image extension"
+msgstr ""
+
+#: texi2html/texi2html.pl:12101
+msgid "@image file name"
+msgstr ""
+
+#: texi2html/texi2html.pl:12123
+msgid "@image alt text"
+msgstr ""
+
+#: texi2html/texi2html.pl:12206
+#, perl-format
+msgid "Macro `%s' called with too many args"
+msgstr ""
+
+#: texi2html/texi2html.pl:12230
+#, perl-format
+msgid "\\ in macro expansion followed `%s' instead of parameter name or \\"
+msgstr ""
+
+#: texi2html/texi2html.pl:12425
+#, perl-format
+msgid "No index prefix found for @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:12847 texi2html/texi2html.pl:13379
+#: texi2html/texi2html.pl:14410 texi2html/texi2html.pl:14430
+#: texi2html/texi2html.pl:14472
+#, perl-format
+msgid "Unmatched `%c%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:12907 texi2html/texi2html.pl:14692
+#, perl-format
+msgid "@%s not allowed in argument to @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:12935
+#, perl-format
+msgid "macro `%s' previously defined"
+msgstr ""
+
+#: texi2html/texi2html.pl:12936
+#, perl-format
+msgid "here is the previous definition of `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:12969
+#, perl-format
+msgid "Macro definition without macro name: %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13010
+#, perl-format
+msgid "undefined flag: %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13022
+msgid "Bad syntax for @value"
+msgstr ""
+
+#: texi2html/texi2html.pl:13059
+#, perl-format
+msgid ""
+"@%s defined with zero or more than one argument should be invoked with {}"
+msgstr ""
+
+#: texi2html/texi2html.pl:13082
+#, perl-format
+msgid "@%s without associated character"
+msgstr ""
+
+#: texi2html/texi2html.pl:13232
+#, perl-format
+msgid "@%s already set"
+msgstr ""
+
+#: texi2html/texi2html.pl:13284
+#, perl-format
+msgid "Anchor `%s' previously defined %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13320
+#, perl-format
+msgid "No closing brace for specially handled command %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13607
+#, perl-format
+msgid "%c%s is obsolete."
+msgstr ""
+
+#: texi2html/texi2html.pl:13611
+#, perl-format
+msgid "%c%s is obsolete; %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13627
+#, perl-format
+msgid "Unknown index `%s' in @printindex"
+msgstr ""
+
+#: texi2html/texi2html.pl:13632
+#, perl-format
+msgid "Printindex before document beginning: @printindex %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13699
+#, perl-format
+msgid "ignored @%s already in an @%s entry"
+msgstr ""
+
+#: texi2html/texi2html.pl:13724 texi2html/texi2html.pl:13772
+#, perl-format
+msgid "@%s seen before first @node"
+msgstr ""
+
+#: texi2html/texi2html.pl:13725
+msgid ""
+"perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?"
+msgstr ""
+
+#: texi2html/texi2html.pl:13729
+#, perl-format
+msgid "Multiple @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13741
+#, perl-format
+msgid "@%s not allowed within %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13790
+#, perl-format
+msgid "Float label `%s' previously defined %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:13964
+#, perl-format
+msgid "Bad argument `%s' to `@%s', using `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:14109 texi2html/texi2html.pl:14110
+#: texi2html/texi2html.pl:14113
+msgid "new menu entry"
+msgstr ""
+
+#: texi2html/texi2html.pl:14243
+msgid "paragraph end"
+msgstr ""
+
+#: texi2html/texi2html.pl:14555
+msgid "@listoffloats type"
+msgstr ""
+
+#: texi2html/texi2html.pl:14578
+#, perl-format
+msgid "Requested float type `%s' not previously used"
+msgstr ""
+
+#: texi2html/texi2html.pl:14747
+#, perl-format
+msgid "Accent command `@%s' must not be followed by whitespace"
+msgstr ""
+
+#: texi2html/texi2html.pl:14751
+#, perl-format
+msgid "Use braces to give a command as an argument to @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:14769
+#, perl-format
+msgid "@%s expected braces"
+msgstr ""
+
+#: texi2html/texi2html.pl:14911 texi2html/texi2html.pl:14924
+#, perl-format
+msgid "@%s not meaningful inside `@%s' block"
+msgstr ""
+
+#: texi2html/texi2html.pl:14960
+#, perl-format
+msgid "@%s outside of table or list"
+msgstr ""
+
+#: texi2html/texi2html.pl:14978
+#, perl-format
+msgid "@%s in empty multitable"
+msgstr ""
+
+#: texi2html/texi2html.pl:14993
+msgid "ignoring @tab outside of multitable"
+msgstr ""
+
+#: texi2html/texi2html.pl:15000
+msgid "ignoring @tab in empty multitable"
+msgstr ""
+
+#: texi2html/texi2html.pl:15004
+#, perl-format
+msgid "Too many columns in multitable item (max %d)"
+msgstr ""
+
+#: texi2html/texi2html.pl:15035
+msgid "@center should not appear in another format"
+msgstr ""
+
+#: texi2html/texi2html.pl:15075 texi2html/texi2html.pl:15095
+#, perl-format
+msgid "Misplaced %c"
+msgstr ""
+
+#: texi2html/texi2html.pl:15417
+msgid "@tab before @item"
+msgstr ""
+
+#: texi2html/texi2html.pl:15648
+#, perl-format
+msgid "%c%s expects a single character `i' or `j' as argument"
+msgstr ""
+
+#: texi2html/texi2html.pl:15652
+#, perl-format
+msgid "%c%s expects `i' or `j' as argument, not `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:15704
+#, perl-format
+msgid "Unknown command with braces `@%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:15740
+#, perl-format
+msgid "%c%s expected braces"
+msgstr ""
+
+#: texi2html/texi2html.pl:15744
+#, perl-format
+msgid "Unexpected command `%s' here"
+msgstr ""
+
+#: texi2html/texi2html.pl:15748
+#, perl-format
+msgid "Unknown command `%s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:15826
+#, perl-format
+msgid "Reached eof before matching @end %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:15834
+#, perl-format
+msgid "%cend macro not found"
+msgstr ""
+
+#: texi2html/texi2html.pl:15839
+#, perl-format
+msgid "@%s missing close brace"
+msgstr ""
+
+#: texi2html/texi2html.pl:16003
+#, perl-format
+msgid "No matching `%cend %s'"
+msgstr ""
+
+#: texi2html/texi2html.pl:16035
+#, perl-format
+msgid "@%s missing closing delimiter sequence: %s}"
+msgstr ""
+
+#: texi2html/texi2html.pl:16039 texi2html/texi2html.pl:16067
+#, perl-format
+msgid "%c%s missing close brace"
+msgstr ""
+
+#: texi2html/texi2html.pl:16148
+#, perl-format
+msgid "%s should not appear in %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:16625
+#, perl-format
+msgid "Index entry not caught: `%s' in %s"
+msgstr ""
+
+#: texi2html/texi2html.pl:16723
+#, perl-format
+msgid "Empty index entry for @%s"
+msgstr ""
+
+#: texi2html/texi2html.pl:16859
+#, perl-format
+msgid "%s:%d: string not closed in css file"
+msgstr ""
+
+#: texi2html/texi2html.pl:16860
+#, perl-format
+msgid "%s:%d: --css-file ended in comment"
+msgstr ""
+
+#: texi2html/texi2html.pl:16861
+#, perl-format
+msgid "%s:%d @import not finished in css file"
+msgstr ""
+
+#: texi2html/texi2html.pl:16891
+#, perl-format
+msgid "%s: could not open --css-file %s: %s\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:16963
+#, perl-format
+msgid "%s:%d: no node to be renamed\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:16974
+#, perl-format
+msgid "%s:%d: nodes without a new name at the end of file\n"
+msgstr ""
+
+#: texi2html/texi2html.pl:17006
+#, perl-format
+msgid "%s: missing file argument.\n"
+msgstr ""
+
+#: texi2html/texi2html.pm:1275
+msgid "Document encoding is utf8, but there is no unicode support"
+msgstr ""
+
+#: texi2html/texi2html.pm:2227
+msgid "recursion is always allowed"
+msgstr ""
+
+#: texi2html/texi2html.pm:2228
+msgid "arguments are quoted by default"
+msgstr ""
+
+#: texi2html/texi2html.pm:6682 texi2html/formats/docbook.pm:1498
+#: texi2html/formats/html.pm:2352 texi2html/maintained_extra/mediawiki.pm:1141
+#, perl-format
+msgid "Raw format %s is not converted"
+msgstr ""
+
+#: texi2html/formats/docbook.pm:1021 texi2html/formats/info.pm:2996
+#: texi2html/formats/plaintext.pm:151
+#, perl-format
+msgid "@image file `%s' unreadable: %s"
+msgstr ""
+
+#: texi2html/formats/docbook.pm:1026 texi2html/formats/info.pm:3001
+#: texi2html/formats/plaintext.pm:156
+#, perl-format
+msgid "Cannot find @image file `%s.txt'"
+msgstr ""
+
+#: texi2html/formats/html.pm:2470
+#, perl-format
+msgid "@image file `%s' (for HTML) not found, using `%s'"
+msgstr ""
+
+#: texi2html/formats/info.pm:1188
+msgid ""
+"@strong{Note...} produces a spurious cross-reference in Info; reword to "
+"avoid that"
+msgstr ""
+
+#: texi2html/formats/info.pm:1352
+msgid "`.' or `,' must follow @xref."
+msgstr ""
+
+#: texi2html/formats/info.pm:1357
+#, perl-format
+msgid "`.' or `,' must follow @xref, not %s"
+msgstr ""
+
+#: texi2html/formats/info.pm:2465
+msgid "anchor outside of any node, it won't be registered"
+msgstr ""
+
+#: texi2html/formats/info.pm:2780
+msgid "@menu before first node"
+msgstr ""
+
+#: texi2html/formats/info.pm:2785
+msgid "@direntry after first node"
+msgstr ""
+
+#: texi2html/formats/info.pm:3199
+msgid "Footnote defined without parent node"
+msgstr ""
+
+#: texi2html/formats/info.pm:3539
+msgid "float reference outside of any node, it won't be registered"
+msgstr ""
+
+#: texi2html/formats/info.pm:3642
+msgid "@dircategory after first node"
+msgstr ""
+
+#: texi2html/maintained_extra/mediawiki.pm:1100
+#, perl-format
+msgid "@image file `%s' not found, using `%s'"
+msgstr ""
+
+#~ msgid "January"
+#~ msgstr "Jänner"

@@ -1,0 +1,10 @@
+/.cvsignore////*////
+/Changes////*////
+/MANIFEST////*////
+/Makefile.PL////*////
+/Makefile.am////*////
+/README////*////
+/TODO////*////
+/defs.in////*////
+/prove.sh////*////
+/texi2any.pl////*////

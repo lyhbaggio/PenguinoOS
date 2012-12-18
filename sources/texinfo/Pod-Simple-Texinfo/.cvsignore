@@ -1,0 +1,7 @@
+*.log
+*.trs
+Makefile.in
+Makefile
+pod2texi
+blib
+pm_to_blib

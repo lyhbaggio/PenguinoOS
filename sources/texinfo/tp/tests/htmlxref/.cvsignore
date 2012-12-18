@@ -1,0 +1,8 @@
+Makefile
+Makefile.in
+tests.log
+tests.out
+diffs
+out_parser
+.texinfo
+htmlxref.cnf

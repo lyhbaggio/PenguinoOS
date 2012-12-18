@@ -1,0 +1,13 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/custhtml-header.htmltexi////*////
+/custhtml.texi////*////
+/custpage.texi////*////
+/ifo.texi////*////
+/initfile.texi////*////
+/options.texi////*////
+/reference.texi////*////
+/tests-parser.txt////*////
+/tests.txt////*////
+/texi2html.texi////*////
+/version.texi////*////

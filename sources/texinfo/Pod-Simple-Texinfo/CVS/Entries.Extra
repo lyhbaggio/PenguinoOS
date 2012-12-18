@@ -1,0 +1,8 @@
+/.cvsignore////*////
+/Changes////*////
+/MANIFEST////*////
+/Makefile.PL////*////
+/Makefile.am////*////
+/README////*////
+/pod2texi.pl////*////
+/prove.sh////*////

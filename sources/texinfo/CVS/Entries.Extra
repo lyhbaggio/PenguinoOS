@@ -1,0 +1,17 @@
+/.cvsignore////*////
+/ABOUT-NLS////*////
+/AUTHORS////*////
+/COPYING////*////
+/ChangeLog////*////
+/ChangeLog.46////*////
+/INSTALL////*////
+/INSTALL.generic////*////
+/Makefile.am////*////
+/NEWS////*////
+/README////*////
+/README-alpha////*////
+/README-hacking////*////
+/TODO////*////
+/autogen.sh////*////
+/configure.ac////*////
+/system.h////*////

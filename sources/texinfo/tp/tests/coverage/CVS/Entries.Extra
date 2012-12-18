@@ -1,0 +1,9 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/f--ile.e--xt////*////
+/f--ile.jpg////*////
+/formatting.texi////*////
+/formatting_utf8.texi////*////
+/simplest.texi////*////
+/tests-parser.txt////*////
+/version.texi////*////

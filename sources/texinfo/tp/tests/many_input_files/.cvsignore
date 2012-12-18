@@ -1,0 +1,11 @@
+*.log
+*.out
+*.trs
+diffs
+Makefile
+Makefile.in
+indices
+index_split
+tex_l2h
+tex_t4ht
+raw_out

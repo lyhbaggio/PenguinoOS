@@ -1,0 +1,10 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/formatting_regions.texi////*////
+/ignore_and_comments_output.init////*////
+/misc_file_collision.init////*////
+/navigation.texi////*////
+/no_monolithic.texi////*////
+/only_toc_out.init////*////
+/tests-parser.txt////*////
+/tests.txt////*////

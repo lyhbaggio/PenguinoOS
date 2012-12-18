@@ -1,0 +1,6 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/generate_all_texi.pl////*////
+/nested_formats.texi////*////
+/tests-parser.txt////*////
+/tests.txt////*////

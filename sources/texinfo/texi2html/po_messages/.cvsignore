@@ -1,0 +1,9 @@
+*.gmo
+Makefile
+Makefile.in
+Makevars
+POTFILES
+POTFILES.in
+remove-potcdate.sed
+stamp-po
+texi2html.pot

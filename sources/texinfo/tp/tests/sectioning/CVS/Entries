@@ -1,0 +1,20 @@
+/.cvsignore/1.2/Sun Jan 15 17:12:06 2012//
+/Makefile.am/1.2/Sun Feb  5 22:00:43 2012//
+/at_commands_in_refs.texi/1.1/Sat Jan 14 19:04:54 2012//
+/equivalent_nodes.texi/1.1/Sat Jan 14 19:04:54 2012//
+/more_nodes_than_sections.texi/1.1/Sat Jan 14 19:04:54 2012//
+/more_sections_than_nodes.texi/1.1/Sat Jan 14 19:04:54 2012//
+/no_node.texi/1.1/Sat Jan 14 19:04:54 2012//
+/no_section_no_top.texi/1.1/Sat Jan 14 19:04:54 2012//
+/node_footnote.texi/1.1/Sat Jan 14 19:04:54 2012//
+/nodes_after_top_before_chapter.texi/1.1/Sat Jan 14 19:04:55 2012//
+/nodes_after_top_before_section.texi/1.1/Sat Jan 14 19:04:55 2012//
+/one_node.texi/1.2/Mon Jan 30 00:52:42 2012//
+/placed_things_before_element.texi/1.1/Sat Jan 14 19:04:55 2012//
+/renamednodes.cnf-ref/1.1/Sat Jan 14 19:04:55 2012//
+/sectioning.texi/1.1/Sat Jan 14 19:04:55 2012//
+/test_refs.texi/1.2/Mon Jan 30 00:52:42 2012//
+/test_two_include.texi/1.1/Sat Jan 14 19:04:55 2012//
+/tests-parser.txt/1.2/Sat Jul 28 23:47:38 2012//
+/two_footnotes_in_nodes.texi/1.1/Sat Jan 14 19:04:55 2012//
+D

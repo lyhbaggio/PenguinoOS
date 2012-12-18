@@ -1,0 +1,23 @@
+/accent_argument.pl/1.32/Thu Aug 23 18:14:58 2012//
+/asis_as_itemize_argument.pl/1.9/Thu Aug 23 18:14:58 2012//
+/bad_enumerate_arguments.pl/1.11/Thu Aug 23 18:14:58 2012//
+/comment_first_on_enumerate_line.pl/1.6/Thu Aug 23 18:14:58 2012//
+/comment_first_on_itemize_line.pl/1.6/Thu Aug 23 18:14:58 2012//
+/enumerate_and_empty_lines.pl/1.12/Thu Aug 23 18:14:58 2012//
+/enumerate_argument.pl/1.12/Thu Aug 23 18:14:58 2012//
+/enumerate_argument_item.pl/1.7/Thu Aug 23 18:14:58 2012//
+/enumerate_in_example.pl/1.13/Thu Aug 23 18:14:58 2012//
+/enumerate_letters.pl/1.13/Thu Aug 23 18:14:58 2012//
+/headitem_itemx_in_enumerate.pl/1.21/Thu Aug 23 18:14:58 2012//
+/headitem_itemx_in_itemize.pl/1.21/Thu Aug 23 18:14:58 2012//
+/inter_item_commands_in_enumerate.pl/1.11/Thu Aug 23 18:14:58 2012//
+/inter_item_commands_in_itemize.pl/1.14/Thu Aug 23 18:14:58 2012//
+/itemize_and_empty_lines.pl/1.12/Thu Aug 23 18:14:58 2012//
+/itemize_in_example.pl/1.10/Thu Aug 23 18:14:59 2012//
+/itemize_line_commands_with_brace.pl/1.4/Thu Aug 23 18:14:59 2012//
+/itemize_long_item.pl/1.10/Thu Aug 23 18:14:59 2012//
+/lone_end_itemize.pl/1.12/Sun Jul  3 14:50:58 2011//
+/not_closed_item.pl/1.22/Thu Aug 23 18:14:59 2012//
+/not_closed_itemize.pl/1.20/Thu Aug 23 18:14:59 2012//
+/w_argument.pl/1.33/Thu Aug 23 18:14:59 2012//
+D

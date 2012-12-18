@@ -1,0 +1,18 @@
+/accent_on_table_line.pl/1.19/Mon Sep  3 21:58:50 2012//
+/block_commands_in_table.pl/1.7/Sat Sep  8 21:56:25 2012//
+/comment_and_itemx_before_item.pl/1.7/Mon Sep  3 21:58:50 2012//
+/definfoenclose_on_table_line.pl/1.20/Sun Dec 16 22:14:45 2012//
+/empty_item_itemx.pl/1.25/Mon Sep  3 21:58:50 2012//
+/headitem_in_table.pl/1.22/Thu Aug 23 18:15:29 2012//
+/inter_item_commands_in_table.pl/1.26/Sat Sep  8 21:56:25 2012//
+/inter_item_commands_in_table_in_example.pl/1.9/Sat Sep  8 21:56:25 2012//
+/invalid_command_and_brace_in_table.pl/1.16/Thu Aug 23 18:15:29 2012//
+/itemx_before_item.pl/1.5/Thu Aug 23 18:15:29 2012//
+/lone_end_table.pl/1.12/Sun Jul  3 14:51:04 2011//
+/long_item.pl/1.17/Mon Sep  3 21:58:50 2012//
+/no_arg_brace_command_on_table_line.pl/1.12/Thu Aug 23 18:15:29 2012//
+/no_argument_for_table.pl/1.11/Thu Aug 23 18:15:29 2012//
+/table_nested.pl/1.24/Sat Sep  8 21:56:25 2012//
+/text_between_item_itemx.pl/1.8/Thu Aug 23 18:15:29 2012//
+/title_and_itemx_before_item.pl/1.5/Thu Aug 23 18:15:29 2012//
+D

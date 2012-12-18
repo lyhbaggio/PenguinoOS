@@ -1,0 +1,8 @@
+Makefile
+Makefile.in
+info.1
+infokey.1
+install-info.1
+makeinfo.1
+texi2dvi.1
+texindex.1

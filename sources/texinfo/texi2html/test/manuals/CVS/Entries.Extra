@@ -1,0 +1,15 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/cvs.init////*////
+/cvs.texi////*////
+/fdl-hello.texi////*////
+/fdl.texi////*////
+/hello.texi////*////
+/info-stnd.texi////*////
+/mini_ker.texi////*////
+/mini_ker_t2h.init////*////
+/tests-parser.txt////*////
+/tests.txt////*////
+/texinfo.texi////*////
+/version-stnd.texi////*////
+/version.texi////*////

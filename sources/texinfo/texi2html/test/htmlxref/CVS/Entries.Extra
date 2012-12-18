@@ -1,0 +1,5 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/htmlxref.cnf-ref////*////
+/tests-parser.txt////*////
+/tests.txt////*////

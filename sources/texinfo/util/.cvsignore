@@ -1,0 +1,9 @@
+.deps
+Makefile
+Makefile.in
+defs
+testSubDir
+texindex
+texinfo.cat
+txixml2texi
+*.sig

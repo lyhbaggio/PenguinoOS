@@ -1,0 +1,9 @@
+/comments.pl////*////
+/end_of_line.pl////*////
+/multiline.pl////*////
+/nested.pl////*////
+/simple.pl////*////
+/verb_and_char_end_of_line_not_closed.pl////*////
+/verb_at_end_of_line_not_closed.pl////*////
+/verb_not_closed.pl////*////
+/verb_not_closed_with_char.pl////*////

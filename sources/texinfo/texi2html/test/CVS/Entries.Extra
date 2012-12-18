@@ -1,0 +1,15 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/README////*////
+/base_tests////*////
+/coverage_macro.texi////*////
+/long_tests////*////
+/manage_test_archives.sh////*////
+/parser_base_tests////*////
+/parser_long_tests////*////
+/parser_tests.sh////*////
+/path_separator.in////*////
+/run_parser_all.sh////*////
+/run_test.sh////*////
+/run_test_all.sh////*////
+/tests.sh////*////

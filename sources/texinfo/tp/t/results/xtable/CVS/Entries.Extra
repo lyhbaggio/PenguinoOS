@@ -1,0 +1,17 @@
+/accent_on_table_line.pl////*////
+/block_commands_in_table.pl////*////
+/comment_and_itemx_before_item.pl////*////
+/definfoenclose_on_table_line.pl////*////
+/empty_item_itemx.pl////*////
+/headitem_in_table.pl////*////
+/inter_item_commands_in_table.pl////*////
+/inter_item_commands_in_table_in_example.pl////*////
+/invalid_command_and_brace_in_table.pl////*////
+/itemx_before_item.pl////*////
+/lone_end_table.pl////*////
+/long_item.pl////*////
+/no_arg_brace_command_on_table_line.pl////*////
+/no_argument_for_table.pl////*////
+/table_nested.pl////*////
+/text_between_item_itemx.pl////*////
+/title_and_itemx_before_item.pl////*////

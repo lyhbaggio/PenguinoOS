@@ -1,0 +1,5 @@
+/.cvsignore////*////
+/.gdbinit////*////
+/Makefile.am////*////
+/README////*////
+/install-info.c////*////

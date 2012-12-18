@@ -1,0 +1,16 @@
+/close_paragraph_command.pl////*////
+/commands_in_flushright.pl////*////
+/comment_between_text.pl////*////
+/comment_in_quotation.pl////*////
+/double_style_paragraph.pl////*////
+/image_in_paragraph.pl////*////
+/no_paragraph_commands.pl////*////
+/paragraph_command.pl////*////
+/paragraph_count_and_example.pl////*////
+/paragraph_in_style_command.pl////*////
+/paragraph_indent_asis.pl////*////
+/text.pl////*////
+/text_comment.pl////*////
+/text_line.pl////*////
+/text_space_comment.pl////*////
+/two_lines.pl////*////

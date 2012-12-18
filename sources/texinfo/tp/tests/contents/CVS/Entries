@@ -1,0 +1,13 @@
+/.cvsignore/1.2/Sun Jan 15 17:12:05 2012//
+/Makefile.am/1.1/Sat Jan 14 18:57:30 2012//
+/contents_and_parts.texi/1.1/Sat Jan 14 18:57:30 2012//
+/contents_at_begin.texi/1.1/Sat Jan 14 18:57:30 2012//
+/contents_at_end.texi/1.1/Sat Jan 14 18:57:30 2012//
+/contents_in_middle_chapter.texi/1.1/Sat Jan 14 18:57:30 2012//
+/contents_in_middle_section.texi/1.1/Sat Jan 14 18:57:30 2012//
+/double_contents.texi/1.1/Sat Jan 14 18:57:31 2012//
+/double_contents_setcontentsaftertitlepage.texi/1.1/Sat Jan 14 18:57:31 2012//
+/no_content.texi/1.1/Sat Jan 14 18:57:31 2012//
+/no_content_setcatpage.texi/1.1/Sat Jan 14 18:57:31 2012//
+/tests-parser.txt/1.2/Sat Jul 28 23:47:37 2012//
+D

@@ -1,0 +1,12 @@
+/bad_syntax.pl////*////
+/empty_set.pl////*////
+/empty_value_in_line.pl////*////
+/simple.pl////*////
+/spaces_before_value.pl////*////
+/value_after_accent.pl////*////
+/value_in_index_commands.pl////*////
+/value_in_invalid_documentencoding.pl////*////
+/value_in_misc_commands.pl////*////
+/value_in_node.pl////*////
+/value_node_directions.pl////*////
+/value_zero.pl////*////

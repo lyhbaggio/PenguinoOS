@@ -1,0 +1,9 @@
+/empty.pl////*////
+/empty_comment.pl////*////
+/good.pl////*////
+/good_comment.pl////*////
+/good_space_comment.pl////*////
+/not_fraction.pl////*////
+/out_of_multitable.pl////*////
+/something_before_columnfractions.pl////*////
+/wrong_command.pl////*////

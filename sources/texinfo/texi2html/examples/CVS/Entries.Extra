@@ -1,0 +1,12 @@
+/bib-example.texi////*////
+/enable_encoding.pm////*////
+/glossary.texi////*////
+/l2h.init////*////
+/makeinfo.pm////*////
+/my-bib-macros.texi////*////
+/noheaders.pm////*////
+/roff.pm////*////
+/style_example.css////*////
+/texinfo-bright-colors.css////*////
+/utf8.pm////*////
+/xhtml.pm////*////

@@ -1,0 +1,13 @@
+/brace_commands_spaces_end_of_lines.pl////*////
+/commands_and_spaces.pl////*////
+/comments_end_lines.pl////*////
+/comments_on_block_command_lines.pl////*////
+/comments_on_misc_command_line.pl////*////
+/image_inline_or_not.pl////*////
+/lone_bye.pl////*////
+/macro_and_args.pl////*////
+/node_and_bye.pl////*////
+/node_no_section.pl////*////
+/raw.pl////*////
+/raw_and_comments.pl////*////
+/spaces_info_lost.pl////*////

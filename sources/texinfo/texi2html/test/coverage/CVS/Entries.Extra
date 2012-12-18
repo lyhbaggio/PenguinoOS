@@ -1,0 +1,15 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/comments.texi////*////
+/delcomment.texi////*////
+/f--ile.e--xt////*////
+/f--ile.jpg////*////
+/float.texi////*////
+/formats_titles.texi////*////
+/formatting.texi////*////
+/imbrications.texi////*////
+/line_commands_comment.texi////*////
+/pass0_macros.texi////*////
+/simplest.texi////*////
+/tests-parser.txt////*////
+/tests.txt////*////

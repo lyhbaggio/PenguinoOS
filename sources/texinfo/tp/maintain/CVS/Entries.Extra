@@ -1,0 +1,15 @@
+/.cvsignore////*////
+/MANIFEST_generated_files////*////
+/Makefile_perl_po////*////
+/all_tests.sh////*////
+/catalog.xml.in////*////
+/change_perl_modules_version.sh////*////
+/language-subtag-registry////*////
+/prepare_perl_module.sh////*////
+/regenerate_converters_documentation.sh////*////
+/regenerate_document_strings_make_rules.sh////*////
+/regenerate_documentlanguages.pl////*////
+/regenerate_file_lists.pl////*////
+/regenerate_latin1_tests.sh////*////
+/regenerate_perl_module_files.sh////*////
+/template.pod////*////

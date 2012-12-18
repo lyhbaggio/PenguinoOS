@@ -1,0 +1,9 @@
+/.cvsignore////*////
+/Makefile.am////*////
+/README////*////
+/coverage_macro.texi////*////
+/long_tests.sh////*////
+/parser_base_tests////*////
+/parser_tests.sh////*////
+/run_parser_all.sh////*////
+/tex_html_tests.sh////*////

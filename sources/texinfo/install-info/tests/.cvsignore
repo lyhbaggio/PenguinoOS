@@ -1,0 +1,5 @@
+*.log
+*.trs
+Makefile
+Makefile.in
+defs

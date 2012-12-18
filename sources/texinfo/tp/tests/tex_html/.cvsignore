@@ -1,0 +1,7 @@
+Makefile
+Makefile.in
+tests.log
+tests.out
+diffs
+out_parser
+raw_out_parser
