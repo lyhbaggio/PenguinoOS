@@ -1,0 +1,20 @@
+Results:
+tab page 2
+this is tab page 3
+this is tab page 1
+this is tab page 4
+gettabvar: pass
+settabvar: pass
+tab drop 1: pass
+tab drop 2: pass
+tab drop 3: pass
+1
+6
+4
+8
+10
+1
+10
+4
+6
+E474 caught.
