@@ -1,0 +1,19 @@
+/.cvsignore/1.3/Fri Sep 27 13:21:27 2002//
+/COPYING/1.1.1.1/Fri Feb  1 22:47:29 2002//
+/HACKING/1.1.1.1/Fri Feb  1 22:47:27 2002//
+/TRANSLATION/1.3/Wed Aug 18 02:22:13 2004//
+/common.h/1.25/Mon Feb 28 07:09:11 2011//
+/display.c/1.32/Thu Jan  6 00:13:12 2005//
+/global.c/1.18/Mon Feb 28 07:09:11 2011//
+/help.c/1.10/Fri Jul 30 04:49:14 2004//
+/it/1.1.1.1/Fri Feb  1 22:47:27 2002//
+/module.mk/1.14/Sun Oct 30 03:44:26 2005//
+/output.c/1.65/Mon Feb 28 07:09:11 2011//
+/p/1.2/Wed Jul 21 00:37:38 2004//
+/parser.c/1.32/Mon Feb 28 07:09:11 2011//
+/ps.1/1.27/Mon Feb 28 07:09:11 2011//
+/regression/1.1.1.1/Fri Feb  1 22:47:29 2002//
+/select.c/1.7/Sun Sep 28 02:45:05 2003//
+/sortformat.c/1.24/Mon Mar 24 04:41:26 2008//
+/stacktrace.c/1.1.1.1/Fri Feb  1 22:47:19 2002//
+D
